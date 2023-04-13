@@ -11,6 +11,7 @@ redirect_from:
 Welcome!
 
 
-paperurl: 'http://XingjianZhouMath.github.io/files/test.md'
+Note: 
+'http://XingjianZhouMath.github.io/files/test.md'
 
 [Download paper here](http://XingjianZhouMath.github.io/files/test.md)
