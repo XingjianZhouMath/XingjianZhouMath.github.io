@@ -7,7 +7,9 @@ redirect_from:
   - /markdown.html
 ---
 
-Recall the definition of asymptotically flat manifold, $g = \bar{g} + \sigma$, where $\bar{g}$ is the standard Euclidean metric and $\sigma = O_{k} \left( |x|^{-\tau} \right)$. We will use $\nabla, \nu, H$ and $\bar{\nabla}, \bar{\nu}, \bar{H}$ to express the connection, the unit normal vector, the mean curvature of regular level set $\Sigma_{t} = f(t)$ in $(M,g)$ and $(R^{3} - B_{r_{0}} ,\bar{g})$, respectively. 
+
+Recall the definition of asymptotically flat manifold, $g = \bar{g} + \sigma$, where $\bar{g}$ is the standard Euclidean metric and $\sigma = O_{k} \left( |x|^{-\tau} \right)$.
+We will use $\nabla, \nu, H$ and $\bar{\nabla}, \bar{\nu}, \bar{H}$ to express the connection, the unit normal vector, the mean curvature of regular level set $\Sigma_{t} = f(t)$ in $(M,g)$ and $(R^{3} - B_{r_{0}} ,\bar{g})$, respectively. 
 
 Now we calculate the following quantities under the local chart at infinity, 
 we can get that
@@ -32,8 +34,6 @@ H =& \operatorname{div}_{\Sigma_{t}} \left( \nu \right) \\
 =& \frac{1}{|\nabla u|} \left( g^{ij} - \nu^{i}\nu^{j} \right) \operatorname{Hess}u \left( \partial x^{i}, \partial x^{j} \right) \\
 \end{aligned}
 $$
-
-
 
 $$
 \lim_{t \rightarrow \infty} \frac{t}{4}\left( 16 \pi - \int_{\Sigma_{t}} H^{2} d \Sigma_{t} \right) \le 8 \pi \mathfrak{m}_{ADM}
