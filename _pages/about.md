@@ -8,5 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-Welcome to my homepage!
-$e^{i \pi}+1=0$
+Welcome!
+
+
+paperurl: 'http://XingjianZhouMath.github.io/files/test.md'
+
+[Download paper here](http://XingjianZhouMath.github.io/files/test.md)
