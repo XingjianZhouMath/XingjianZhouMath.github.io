@@ -1,2 +1,2 @@
 Test!
-$$ a $$
+How to create a math-type equation?
