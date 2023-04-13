@@ -7,6 +7,7 @@ redirect_from:
   - /markdown.html
 ---
 
+## Note of AF maniflod
 
 Recall the definition of asymptotically flat manifold, $g = \bar{g} + \sigma$, where $\bar{g}$ is the standard Euclidean metric and $\sigma = O_{k} \left( |x|^{-\tau} \right)$.
 We will use $\nabla, \nu, H$ and $\bar{\nabla}, \bar{\nu}, \bar{H}$ to express the connection, the unit normal vector, the mean curvature of regular level set $\Sigma_{t} = f(t)$ in $(M,g)$ and $(R^{3} - B_{r_{0}} ,\bar{g})$, respectively. 
