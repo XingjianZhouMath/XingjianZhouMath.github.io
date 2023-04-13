@@ -9,6 +9,4 @@ redirect_from:
 ---
 
 Welcome to my homepage!
-$$
-e^{i \pi}+1=0
-$$
+$e^{i \pi}+1=0$
