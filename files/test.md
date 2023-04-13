@@ -1,5 +1,15 @@
-​	Recall the definition of asymptotically flat manifold, $g = \bar{g} + \sigma$, where $\bar{g}$ is the standard Euclidean metric and $\sigma = O_{k} \left( |x|^{-\tau} \right)$. We will use $\nabla, \nu, H$ and $\bar{\nabla}, \bar{\nu}, \bar{H}$ to express the connection, the unit normal vector, the mean curvature of regular level set $\Sigma_{t} = f(t)$ in $(M,g)$ and $(R^{3} - B_{r_{0}} ,\bar{g})$, respectively. 
-​	Now we calculate the following quantities under the local chart at infinity, 
+---
+permalink: /markdown/
+title: "Note"
+author_profile: true
+redirect_from: 
+  - /md/
+  - /markdown.html
+---
+
+Recall the definition of asymptotically flat manifold, $g = \bar{g} + \sigma$, where $\bar{g}$ is the standard Euclidean metric and $\sigma = O_{k} \left( |x|^{-\tau} \right)$. We will use $\nabla, \nu, H$ and $\bar{\nabla}, \bar{\nu}, \bar{H}$ to express the connection, the unit normal vector, the mean curvature of regular level set $\Sigma_{t} = f(t)$ in $(M,g)$ and $(R^{3} - B_{r_{0}} ,\bar{g})$, respectively. 
+
+Now we calculate the following quantities under the local chart at infinity, 
 we can get that
 $$
 \nu = \frac{\nabla u}{|\nabla u|}, \quad \bar{\nu} = \frac{\bar{\nabla} u}{|\bar{\nabla} u|_{\bar{g}}}.
