@@ -11,6 +11,7 @@ Recall the definition of asymptotically flat manifold, $g = \bar{g} + \sigma$, w
 
 Now we calculate the following quantities under the local chart at infinity, 
 we can get that
+
 $$
 \nu = \frac{\nabla u}{|\nabla u|}, \quad \bar{\nu} = \frac{\bar{\nabla} u}{|\bar{\nabla} u|_{\bar{g}}}.
 $$
