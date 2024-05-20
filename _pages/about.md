@@ -11,6 +11,8 @@ redirect_from:
 Welcome to my homepage!
 I'm a Ph.D. student in Xiamen University, and I'm going to University of Trento, Italy for a jointly training. 
 
+Here is my [CV](http://XingjianZhouMath.github.io/files/test.md)
+
 Note: 
 'http://XingjianZhouMath.github.io/files/test.md'
 
