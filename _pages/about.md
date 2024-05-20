@@ -8,8 +8,8 @@ redirect_from:
   - /about.html
 ---
 
-Welcome!
-
+Welcome to my homepage!
+I'm a Ph.D. student in Xiamen University, and I'm going to University of Trento, Italy for a jointly training. 
 
 Note: 
 'http://XingjianZhouMath.github.io/files/test.md'
