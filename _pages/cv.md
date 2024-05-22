@@ -35,7 +35,5 @@ Work experience
 
 Publications
 ======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+  <ul>{% https://www.sciencedirect.com/science/article/pii/S0001870824000410 %}</ul>
 
