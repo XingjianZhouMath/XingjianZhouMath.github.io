@@ -33,7 +33,4 @@ Work experience
   * Xiamen University
   * Course: Riemannian Geometry
 
-Publications
-======
-  <ul>{% https://www.sciencedirect.com/science/article/pii/S0001870824000410 %}</ul>
 
