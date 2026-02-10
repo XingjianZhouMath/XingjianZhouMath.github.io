@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Xingjian Zhou"
-  avatar           : "puren001.png"
+  avatar           : #"puren001.png"
   bio              : "Geometric Analysis"
   location         : #"Location"
   employer         :
