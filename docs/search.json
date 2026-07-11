@@ -4,21 +4,21 @@
     "href": "publications.html",
     "title": "Publications",
     "section": "",
-    "text": "Chao Xia, Jiabin Yin, Xingjian Zhou. “New monotonicity for p-capacitary functions in 3-manifolds with nonnegative scalar curvature.” Advances in Mathematics 440 (2024), 109526. Journal\nJiabin Yin, Xingjian Zhou. “Sharp upper bounds of p-capacity in convex cone and asymptotically flat half-space.” Letters in Mathematical Physics 116 (2026), Article 34."
-  },
-  {
-    "objectID": "publications.html#peer-reviewed-publications",
-    "href": "publications.html#peer-reviewed-publications",
-    "title": "Publications",
-    "section": "",
-    "text": "Chao Xia, Jiabin Yin, Xingjian Zhou. “New monotonicity for p-capacitary functions in 3-manifolds with nonnegative scalar curvature.” Advances in Mathematics 440 (2024), 109526. Journal\nJiabin Yin, Xingjian Zhou. “Sharp upper bounds of p-capacity in convex cone and asymptotically flat half-space.” Letters in Mathematical Physics 116 (2026), Article 34."
+    "text": "Chao Xia, Jiabin Yin, Xingjian Zhou. “Mass-p-Capacity Inequalities in Asymptotically Flat Half-Spaces.” arXiv:2605.31202 (2026). arXiv\nJiabin Yin, Xingjian Zhou. “General monotone formula for homogeneous k-Hessian equation in the exterior domain and its applications.” arXiv:2506.01434 (2025). arXiv"
   },
   {
     "objectID": "publications.html#preprints",
     "href": "publications.html#preprints",
     "title": "Publications",
-    "section": "Preprints",
-    "text": "Preprints\n\n\nChao Xia, Jiabin Yin, Xingjian Zhou. “Mass-p-Capacity Inequalities in Asymptotically Flat Half-Spaces.” arXiv:2605.31202 (2026). arXiv\nJiabin Yin, Xingjian Zhou. “General monotone formula for homogeneous k-Hessian equation in the exterior domain and its applications.” arXiv:2506.01434 (2025). arXiv\n\n\nFor a compact overview of my academic background, see my Curriculum Vitae."
+    "section": "",
+    "text": "Chao Xia, Jiabin Yin, Xingjian Zhou. “Mass-p-Capacity Inequalities in Asymptotically Flat Half-Spaces.” arXiv:2605.31202 (2026). arXiv\nJiabin Yin, Xingjian Zhou. “General monotone formula for homogeneous k-Hessian equation in the exterior domain and its applications.” arXiv:2506.01434 (2025). arXiv"
+  },
+  {
+    "objectID": "publications.html#publications",
+    "href": "publications.html#publications",
+    "title": "Publications",
+    "section": "Publications",
+    "text": "Publications\n\n\nJiabin Yin, Xingjian Zhou. “Sharp upper bounds of p-capacity in convex cone and asymptotically flat half-space.” Letters in Mathematical Physics 116 (2026), Article 34. Journal\nChao Xia, Jiabin Yin, Xingjian Zhou. “New monotonicity for p-capacitary functions in 3-manifolds with nonnegative scalar curvature.” Advances in Mathematics 440 (2024), 109526. Journal\n\n\nFor a compact overview of my academic background, see my Curriculum Vitae."
   },
   {
     "objectID": "notes/first-variation.html",
@@ -56,55 +56,6 @@
     "text": "Minimality\nA hypersurface is stationary for every compactly supported normal variation precisely when\n\\[\nH=0.\n\\]\nThus minimal hypersurfaces are exactly the critical points of the area functional. This is the geometric analogue of the Euler-Lagrange equation in the calculus of variations.\n\n\n\n\n\n\nNoteSign convention\n\n\n\nSome authors define the mean curvature with the opposite sign. Under that convention the right-hand side of the first variation formula changes sign, but the stationarity condition remains \\(H=0\\).\n\n\n\n← Back to all notes"
   },
   {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "Curriculum Vitae",
-    "section": "",
-    "text": "Download CV (PDF)\nEmail\nORCID\nGoogle Scholar\nGitHub"
-  },
-  {
-    "objectID": "cv.html#education",
-    "href": "cv.html#education",
-    "title": "Curriculum Vitae",
-    "section": "Education",
-    "text": "Education\n\n\nJoint Ph.D. · University of Trento\nTrento, Italy · 2024-present Hosts: Prof. Virginia Agostiniani and Prof. Lorenzo Mazzieri\n\n\nPh.D. in Mathematics · Xiamen University\nXiamen, China · 2022-present Advisor: Prof. Chao Xia\n\n\nM.S. in Mathematics · Xiamen University\nXiamen, China · 2020-2022 Advisor: Prof. Chao Xia\n\n\nB.S. in Mathematics · Southeast University\nNanjing, China · 2016-2020"
-  },
-  {
-    "objectID": "cv.html#research-interests",
-    "href": "cv.html#research-interests",
-    "title": "Curriculum Vitae",
-    "section": "Research Interests",
-    "text": "Research Interests\nMy research lies in geometric analysis, focusing on monotonicity formulas and geometric inequalities associated with elliptic equations arising in differential geometry. Current interests include scalar curvature problems, rigidity phenomena, and analytic aspects of the Penrose inequality.\nKeywords: Potential theory; nonlinear elliptic and parabolic PDEs; inverse mean curvature flow; minimal surfaces; scalar curvature."
-  },
-  {
-    "objectID": "cv.html#publications-and-preprints",
-    "href": "cv.html#publications-and-preprints",
-    "title": "Curriculum Vitae",
-    "section": "Publications and Preprints",
-    "text": "Publications and Preprints\n\nChao Xia, Jiabin Yin, Xingjian Zhou. “New monotonicity for p-capacitary functions in 3-manifolds with nonnegative scalar curvature.” Advances in Mathematics 440 (2024), 109526. Journal\nJiabin Yin, Xingjian Zhou. “Sharp upper bounds of p-capacity in convex cone and asymptotically flat half-space.” Letters in Mathematical Physics 116 (2026), Article 34.\nJiabin Yin, Xingjian Zhou. “General monotone formula for homogeneous k-Hessian equation in the exterior domain and its applications.” arXiv:2506.01434 (2025). arXiv\nChao Xia, Jiabin Yin, Xingjian Zhou. “Mass-p-Capacity Inequalities in Asymptotically Flat Half-Spaces.” arXiv:2605.31202 (2026). arXiv"
-  },
-  {
-    "objectID": "cv.html#award",
-    "href": "cv.html#award",
-    "title": "Curriculum Vitae",
-    "section": "Award",
-    "text": "Award\nNational Scholarship of China, 2025."
-  },
-  {
-    "objectID": "cv.html#selected-talks-and-posters",
-    "href": "cv.html#selected-talks-and-posters",
-    "title": "Curriculum Vitae",
-    "section": "Selected Talks and Posters",
-    "text": "Selected Talks and Posters\n\nInvited talk, Guangzhou Young Geometric Analysis Workshop, Guangzhou, China (2023).\nInvited talk, Southeast University, Nanjing, China (2024).\nPoster presentation, Topics in Geometric Analysis, Pisa, Italy (2025).\nInvited talk, Scuola Normale Superiore, Pisa, Italy (2025).\nPoster presentation, PRIN School on Geometry and Gravity, SISSA, Trieste, Italy (2025).\nInvited talk, Second Tianyuan Southeast Geometry Forum, Xiamen University, China (2026).\nInvited talk, University of Freiburg, Freiburg, Germany (2026)."
-  },
-  {
-    "objectID": "cv.html#teaching-experience",
-    "href": "cv.html#teaching-experience",
-    "title": "Curriculum Vitae",
-    "section": "Teaching Experience",
-    "text": "Teaching Experience\nTeaching Assistant\n\nDifferential Geometry (Spring 2021)\nDifferential Manifolds (Fall 2021; Fall 2022)\nRiemannian Geometry (Spring 2024)"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Xingjian Zhou",
@@ -138,6 +89,90 @@
     "title": "Xingjian Zhou",
     "section": "Contact",
     "text": "Contact\nzhouxingjian@stu.xmu.edu.cn Xiamen University / University of Trento\nORCID Google Scholar GitHub"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "Download CV (PDF)\nEmail\nORCID\nGoogle Scholar\nGitHub"
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "Curriculum Vitae",
+    "section": "Education",
+    "text": "Education\n\n\nJoint Ph.D. · University of Trento\nTrento, Italy · 2024-present Hosts: Prof. Virginia Agostiniani and Prof. Lorenzo Mazzieri\n\n\nPh.D. in Mathematics · Xiamen University\nXiamen, China · 2022-present Advisor: Prof. Chao Xia\n\n\nM.S. in Mathematics · Xiamen University\nXiamen, China · 2020-2022 Advisor: Prof. Chao Xia\n\n\nB.S. in Mathematics · Southeast University\nNanjing, China · 2016-2020"
+  },
+  {
+    "objectID": "cv.html#research-interests",
+    "href": "cv.html#research-interests",
+    "title": "Curriculum Vitae",
+    "section": "Research Interests",
+    "text": "Research Interests\nMy research lies in geometric analysis, focusing on monotonicity formulas and geometric inequalities associated with elliptic equations arising in differential geometry. Current interests include scalar curvature problems, rigidity phenomena, and analytic aspects of the Penrose inequality.\nKeywords: Potential theory; nonlinear elliptic and parabolic PDEs; inverse mean curvature flow; minimal surfaces; scalar curvature."
+  },
+  {
+    "objectID": "cv.html#publications-and-preprints",
+    "href": "cv.html#publications-and-preprints",
+    "title": "Curriculum Vitae",
+    "section": "Publications and Preprints",
+    "text": "Publications and Preprints\n\nChao Xia, Jiabin Yin, Xingjian Zhou. “New monotonicity for p-capacitary functions in 3-manifolds with nonnegative scalar curvature.” Advances in Mathematics 440 (2024), 109526. Journal\nJiabin Yin, Xingjian Zhou. “Sharp upper bounds of p-capacity in convex cone and asymptotically flat half-space.” Letters in Mathematical Physics 116 (2026), Article 34. Journal\nJiabin Yin, Xingjian Zhou. “General monotone formula for homogeneous k-Hessian equation in the exterior domain and its applications.” arXiv:2506.01434 (2025). arXiv\nChao Xia, Jiabin Yin, Xingjian Zhou. “Mass-p-Capacity Inequalities in Asymptotically Flat Half-Spaces.” arXiv:2605.31202 (2026). arXiv"
+  },
+  {
+    "objectID": "cv.html#award",
+    "href": "cv.html#award",
+    "title": "Curriculum Vitae",
+    "section": "Award",
+    "text": "Award\nNational Scholarship of China, 2025."
+  },
+  {
+    "objectID": "cv.html#selected-talks-and-posters",
+    "href": "cv.html#selected-talks-and-posters",
+    "title": "Curriculum Vitae",
+    "section": "Selected Talks and Posters",
+    "text": "Selected Talks and Posters\n\nInvited talk, Guangzhou Young Geometric Analysis Workshop, Guangzhou, China (2023).\nInvited talk, Southeast University, Nanjing, China (2024).\nPoster presentation, Topics in Geometric Analysis, Pisa, Italy (2025).\nInvited talk, Scuola Normale Superiore, Pisa, Italy (2025).\nPoster presentation, PRIN School on Geometry and Gravity, SISSA, Trieste, Italy (2025).\nInvited talk, Second Tianyuan Southeast Geometry Forum, Xiamen University, China (2026).\nInvited talk, University of Freiburg, Freiburg, Germany (2026)."
+  },
+  {
+    "objectID": "cv.html#teaching-experience",
+    "href": "cv.html#teaching-experience",
+    "title": "Curriculum Vitae",
+    "section": "Teaching Experience",
+    "text": "Teaching Experience\nTeaching Assistant\n\nDifferential Geometry (Spring 2021)\nDifferential Manifolds (Fall 2021; Fall 2022)\nRiemannian Geometry (Spring 2024)"
+  },
+  {
+    "objectID": "notes/conformal-metric.html",
+    "href": "notes/conformal-metric.html",
+    "title": "Conformal Transformation Laws",
+    "section": "",
+    "text": "\\(\\newcommand{\\owedge}{\\mathbin{\\rlap{\\bigcirc}\\mkern5mu\\lower0.02ex{\\scriptstyle\\wedge}\\mkern3mu}}\\)"
+  },
+  {
+    "objectID": "notes/conformal-metric.html#introduction",
+    "href": "notes/conformal-metric.html#introduction",
+    "title": "Conformal Transformation Laws",
+    "section": "Introduction",
+    "text": "Introduction\nWe study the transformation laws for geometric quantities under a conformal change of metric. Let \\((M^n,g)\\) be an \\(n\\)-dimensional Riemannian manifold, and consider the conformally related metric\n\\[\n\\widetilde{g}=e^{2f}g,\n\\]\nwhere \\(f\\in C^\\infty(M)\\).\nThe Riemann curvature tensor, Ricci curvature tensor, and scalar curvature associated with \\(g\\) will be denoted by \\(\\mathrm{Rm}\\), \\(\\mathrm{Ric}\\), and \\(\\mathrm{Sc}\\), respectively. Their counterparts with respect to \\(\\widetilde{g}\\) will be denoted by \\(\\widetilde{\\mathrm{Rm}}\\), \\(\\widetilde{\\mathrm{Ric}}\\), and \\(\\widetilde{\\mathrm{Sc}}\\).\nNow let \\(\\Sigma^{n-1}\\subset M^n\\) be an immersed hypersurface. With respect to \\(g\\), denote its unit normal, second fundamental form, and mean curvature by \\(\\nu\\), \\(A\\), and \\(H\\), respectively. The corresponding quantities computed with respect to \\(\\widetilde{g}\\) will be denoted by \\(\\widetilde{\\nu}\\), \\(\\widetilde{A}\\), and \\(\\widetilde{H}\\).\nOur goal is to derive the transformation laws for these intrinsic and extrinsic geometric quantities under the conformal change\n\\[\ng\\longmapsto \\widetilde{g}=e^{2f}g.\n\\]"
+  },
+  {
+    "objectID": "notes/conformal-metric.html#geometric-quantities-and-conventions",
+    "href": "notes/conformal-metric.html#geometric-quantities-and-conventions",
+    "title": "Conformal Transformation Laws",
+    "section": "Geometric Quantities and Conventions",
+    "text": "Geometric Quantities and Conventions\nIn this section, we fix the notation and sign conventions used throughout the note.\n\nLevi-Civita Connection\nLet \\(\\nabla\\) and \\(\\widetilde{\\nabla}\\) denote the Levi-Civita connections of \\(g\\) and \\(\\widetilde{g}\\), respectively. The gradient, Hessian, and Laplace–Beltrami operator associated with \\(g\\) are defined by\n\\[\ng(\\nabla f,X)=df(X),\n\\]\n\\[\n\\nabla^2f(X,Y)=X(Yf)-(\\nabla_XY)f,\n\\]\nand\n\\[\n\\Delta f=\\operatorname{tr}_g\\nabla^2f.\n\\]\n\n\nCurvature Tensors\nWe define the Riemann curvature operator by\n\\[\n\\mathrm{Rm}(X,Y)Z\n=\\nabla_X\\nabla_YZ\n-\\nabla_Y\\nabla_XZ\n-\\nabla_{[X,Y]}Z.\n\\]\nIts \\((0,4)\\)-tensor version is\n\\[\n\\mathrm{Rm}(X,Y,Z,W)\n=g\\bigl(\\mathrm{Rm}(X,Y)Z,W\\bigr).\n\\]\nThe Ricci and scalar curvatures are obtained by taking traces:\n\\[\n\\mathrm{Ric}_{jl}=g^{ik}\\mathrm{Rm}_{ijkl},\n\\qquad\n\\mathrm{Sc}=g^{jl}\\mathrm{Ric}_{jl}.\n\\]\nFor symmetric \\((0,2)\\)-tensors \\(P\\) and \\(Q\\), we use the Kulkarni–Nomizu product\n\\[\n\\begin{aligned}\n(P\\owedge Q)(X,Y,Z,W)\n={}&P(X,Z)Q(Y,W)+P(Y,W)Q(X,Z)\\\\\n&-P(X,W)Q(Y,Z)-P(Y,Z)Q(X,W).\n\\end{aligned}\n\\]\n\n\nHypersurface Geometry\nLet \\(\\nu\\) be a choice of unit normal along \\(\\Sigma\\). For tangent vector fields \\(X,Y\\in T\\Sigma\\), we define the second fundamental form by\n\\[\nA(X,Y)=g(\\nabla_X\\nu,Y).\n\\]\nThe mean curvature is the trace of \\(A\\) with respect to the induced metric:\n\\[\nH=\\operatorname{tr}_{g|_{T\\Sigma}}A.\n\\]\n\n\n\n\n\n\nNoteSign conventions\n\n\n\nThe signs in the formulas depend on the conventions for \\(\\mathrm{Rm}\\), \\(A\\), and \\(\\Delta\\). All formulas below use the conventions fixed above. In particular, \\(H\\) is the trace of \\(A\\), rather than its average."
+  },
+  {
+    "objectID": "notes/conformal-metric.html#conformal-transformation-formulas",
+    "href": "notes/conformal-metric.html#conformal-transformation-formulas",
+    "title": "Conformal Transformation Laws",
+    "section": "Conformal Transformation Formulas",
+    "text": "Conformal Transformation Formulas\nDefine the symmetric \\((0,2)\\)-tensor\n\\[\nB=\\nabla^2f-df\\otimes df+\\frac12|\\nabla f|^2g.\n\\]\nWith the conventions above, the conformal transformation laws are as follows.\n\nLevi-Civita Connection\nFor vector fields \\(X,Y\\) on \\(M\\),\n\\[\n\\boxed{\n\\widetilde{\\nabla}_XY\n=\\nabla_XY+X(f)Y+Y(f)X-g(X,Y)\\nabla f\n}.\n\\]\n\n\nRiemann Curvature Tensor\nAs a \\((0,4)\\)-tensor,\n\\[\n\\boxed{\n\\widetilde{\\mathrm{Rm}}\n=e^{2f}\\bigl(\\mathrm{Rm}-g\\owedge B\\bigr)\n}.\n\\]\n\n\nRicci Curvature\nThe Ricci curvature transforms according to\n\\[\n\\boxed{\n\\widetilde{\\mathrm{Ric}}\n=\\mathrm{Ric}\n-(n-2)\\bigl(\\nabla^2f-df\\otimes df\\bigr)\n-\\bigl(\\Delta f+(n-2)|\\nabla f|^2\\bigr)g\n}.\n\\]\n\n\nScalar Curvature\nThe scalar curvature satisfies\n\\[\n\\boxed{\n\\widetilde{\\mathrm{Sc}}\n=e^{-2f}\n\\left[\n\\mathrm{Sc}-2(n-1)\\Delta f\n-(n-1)(n-2)|\\nabla f|^2\n\\right]\n}.\n\\]\n\n\nHypersurface Quantities\nThe unit normal, second fundamental form, and mean curvature transform as\n\\[\n\\boxed{\\widetilde{\\nu}=e^{-f}\\nu},\n\\]\n\\[\n\\boxed{\n\\widetilde{A}(X,Y)\n=e^f\\bigl(A(X,Y)+\\nu(f)g(X,Y)\\bigr)\n},\n\\]\nand\n\\[\n\\boxed{\n\\widetilde{H}\n=e^{-f}\\bigl(H+(n-1)\\nu(f)\\bigr)\n}.\n\\]"
+  },
+  {
+    "objectID": "notes/conformal-metric.html#derivations",
+    "href": "notes/conformal-metric.html#derivations",
+    "title": "Conformal Transformation Laws",
+    "section": "Derivations",
+    "text": "Derivations\n\nDifference of the Levi-Civita Connections\nSet\n\\[\nD(X,Y)=\\widetilde{\\nabla}_XY-\\nabla_XY.\n\\]\nSince both connections are torsion-free, \\(D\\) is symmetric in \\(X\\) and \\(Y\\). Applying the Koszul formula to \\(\\widetilde{g}=e^{2f}g\\) gives\n\\[\n\\begin{aligned}\n2\\widetilde{g}(\\widetilde{\\nabla}_XY,Z)\n={}&X\\widetilde{g}(Y,Z)+Y\\widetilde{g}(X,Z)-Z\\widetilde{g}(X,Y)\\\\\n&+\\widetilde{g}([X,Y],Z)-\\widetilde{g}([X,Z],Y)-\\widetilde{g}([Y,Z],X).\n\\end{aligned}\n\\]\nUsing\n\\[\nX\\bigl(\\widetilde{g}(Y,Z)\\bigr)\n=e^{2f}\\bigl(2X(f)g(Y,Z)+X(g(Y,Z))\\bigr)\n\\]\nand comparing with the Koszul formula for \\(g\\), we obtain\n\\[\ng(D(X,Y),Z)\n=X(f)g(Y,Z)+Y(f)g(X,Z)-Z(f)g(X,Y).\n\\]\nBecause \\(Z(f)=g(\\nabla f,Z)\\), this yields\n\\[\nD(X,Y)=X(f)Y+Y(f)X-g(X,Y)\\nabla f.\n\\]\nTherefore,\n\\[\n\\widetilde{\\nabla}_XY\n=\\nabla_XY+X(f)Y+Y(f)X-g(X,Y)\\nabla f.\n\\]\n\n\nTransformation of the Riemann Curvature Tensor\nFor two torsion-free connections related by \\(\\widetilde{\\nabla}=\\nabla+D\\), their curvature operators satisfy\n\\[\n\\begin{aligned}\n\\widetilde{\\mathrm{Rm}}(X,Y)Z\n={}&\\mathrm{Rm}(X,Y)Z\n+(\\nabla_XD)(Y,Z)-(\\nabla_YD)(X,Z)\\\\\n&+D(X,D(Y,Z))-D(Y,D(X,Z)).\n\\end{aligned}\n\\]\nSubstituting\n\\[\nD(X,Y)=X(f)Y+Y(f)X-g(X,Y)\\nabla f\n\\]\nand collecting the Hessian and gradient terms gives\n\\[\ne^{-2f}\\widetilde{\\mathrm{Rm}}\n=\\mathrm{Rm}-g\\owedge\n\\left(\n\\nabla^2f-df\\otimes df+\\frac12|\\nabla f|^2g\n\\right).\n\\]\nEquivalently,\n\\[\n\\widetilde{\\mathrm{Rm}}\n=e^{2f}\\bigl(\\mathrm{Rm}-g\\owedge B\\bigr).\n\\]\n\n\nTransformation of the Ricci Curvature\nContracting the first and third indices of \\(g\\owedge B\\) gives\n\\[\ng^{ik}(g\\owedge B)_{ijkl}\n=(n-2)B_{jl}+(\\operatorname{tr}_gB)g_{jl}.\n\\]\nMoreover,\n\\[\n\\operatorname{tr}_gB\n=\\Delta f+\\frac{n-2}{2}|\\nabla f|^2.\n\\]\nSince \\(\\widetilde{g}^{ik}=e^{-2f}g^{ik}\\), tracing the transformed Riemann tensor yields\n\\[\n\\begin{aligned}\n\\widetilde{\\mathrm{Ric}}\n={}&\\mathrm{Ric}-(n-2)B-(\\operatorname{tr}_gB)g\\\\\n={}&\\mathrm{Ric}\n-(n-2)(\\nabla^2f-df\\otimes df)\n-\\bigl(\\Delta f+(n-2)|\\nabla f|^2\\bigr)g.\n\\end{aligned}\n\\]\n\n\nTransformation of the Scalar Curvature\nTaking the trace of \\(\\widetilde{\\mathrm{Ric}}\\) with respect to \\(\\widetilde{g}\\), we find\n\\[\n\\widetilde{\\mathrm{Sc}}\n=\\widetilde{g}^{ij}\\widetilde{\\mathrm{Ric}}_{ij}\n=e^{-2f}g^{ij}\\widetilde{\\mathrm{Ric}}_{ij}.\n\\]\nThe \\(g\\)-trace of the Ricci transformation formula is\n\\[\ng^{ij}\\widetilde{\\mathrm{Ric}}_{ij}\n=\\mathrm{Sc}-2(n-1)\\Delta f\n-(n-1)(n-2)|\\nabla f|^2.\n\\]\nConsequently,\n\\[\n\\widetilde{\\mathrm{Sc}}\n=e^{-2f}\n\\left[\n\\mathrm{Sc}-2(n-1)\\Delta f\n-(n-1)(n-2)|\\nabla f|^2\n\\right].\n\\]\n\n\nTransformation of the Unit Normal\nBecause \\(\\nu\\) is a \\(g\\)-unit normal,\n\\[\ng(\\nu,\\nu)=1.\n\\]\nThe vector field \\(e^{-f}\\nu\\) remains normal to \\(\\Sigma\\), and\n\\[\n\\widetilde{g}(e^{-f}\\nu,e^{-f}\\nu)\n=e^{2f}g(e^{-f}\\nu,e^{-f}\\nu)=1.\n\\]\nHence\n\\[\n\\widetilde{\\nu}=e^{-f}\\nu.\n\\]\n\n\nTransformation of the Second Fundamental Form\nFor \\(X,Y\\in T\\Sigma\\),\n\\[\n\\widetilde{A}(X,Y)\n=\\widetilde{g}(\\widetilde{\\nabla}_X\\widetilde{\\nu},Y).\n\\]\nUsing \\(\\widetilde{\\nu}=e^{-f}\\nu\\), we compute\n\\[\n\\widetilde{\\nabla}_X\\widetilde{\\nu}\n=-e^{-f}X(f)\\nu+e^{-f}\\widetilde{\\nabla}_X\\nu.\n\\]\nThe connection transformation formula gives\n\\[\n\\widetilde{\\nabla}_X\\nu\n=\\nabla_X\\nu+X(f)\\nu+\\nu(f)X,\n\\]\nbecause \\(g(X,\\nu)=0\\). Therefore,\n\\[\n\\widetilde{\\nabla}_X\\widetilde{\\nu}\n=e^{-f}\\bigl(\\nabla_X\\nu+\\nu(f)X\\bigr).\n\\]\nIt follows that\n\\[\n\\begin{aligned}\n\\widetilde{A}(X,Y)\n&=e^{2f}g\\left(e^{-f}(\\nabla_X\\nu+\\nu(f)X),Y\\right)\\\\\n&=e^f\\bigl(A(X,Y)+\\nu(f)g(X,Y)\\bigr).\n\\end{aligned}\n\\]\n\n\nTransformation of the Mean Curvature\nLet \\(\\{e_1,\\ldots,e_{n-1}\\}\\) be a local \\(g\\)-orthonormal frame tangent to \\(\\Sigma\\). Then \\(\\{e^{-f}e_1,\\ldots,e^{-f}e_{n-1}\\}\\) is \\(\\widetilde{g}\\)-orthonormal. Hence\n\\[\n\\begin{aligned}\n\\widetilde{H}\n&=\\sum_{a=1}^{n-1}\\widetilde{A}(e^{-f}e_a,e^{-f}e_a)\\\\\n&=e^{-f}\\sum_{a=1}^{n-1}\\bigl(A(e_a,e_a)+\\nu(f)\\bigr)\\\\\n&=e^{-f}\\bigl(H+(n-1)\\nu(f)\\bigr).\n\\end{aligned}\n\\]\nThus,\n\\[\n\\widetilde{H}\n=e^{-f}\\bigl(H+(n-1)\\nu(f)\\bigr).\n\\]\n\n← Back to all notes"
   },
   {
     "objectID": "notes/index.html",

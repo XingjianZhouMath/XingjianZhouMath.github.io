@@ -278,3 +278,150 @@ a {
     margin-top: 0.5rem;
   }
 }
+/* Publications 页面保留文档标题用于浏览器和导航，但不在正文顶部重复显示。 */
+.publications-page #title-block-header {
+  display: none;
+}
+
+/* Notes 页面使用独立容器建立两列布局，避免影响 Quarto 自带的页面网格。 */
+.notes-layout {
+  display: grid;
+  grid-template-columns: minmax(210px, 250px) minmax(0, 1fr);
+  gap: clamp(1.5rem, 3vw, 3rem);
+  align-items: start;
+  width: 100%;
+}
+
+/* 控制 Notes 页面左侧笔记栏的边框、背景和固定阅读位置。 */
+.notes-sidebar {
+  position: sticky;
+  top: 5.5rem;
+  width: auto;
+  margin: 0;
+  padding: 1.25rem;
+  border: 1px solid rgba(23, 54, 93, 0.24);
+  border-radius: 0.5rem;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(23, 54, 93, 0.06);
+}
+
+/* 设置左侧笔记栏标题的大小和分隔线。 */
+.notes-sidebar h2 {
+  margin: 0 0 0.85rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid rgba(23, 54, 93, 0.16);
+  font-size: 1.2rem;
+}
+
+/* 让侧栏导航中的链接纵向排列。 */
+.notes-sidebar nav {
+  display: grid;
+  gap: 0.35rem;
+}
+
+/* 设置每个笔记链接的可点击区域和基础外观。 */
+.notes-sidebar nav a {
+  display: block;
+  padding: 0.55rem 0.65rem;
+  border-radius: 0.35rem;
+  color: var(--academic-blue);
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+/* 鼠标经过或键盘聚焦时突出显示当前笔记链接。 */
+.notes-sidebar nav a:hover,
+.notes-sidebar nav a:focus-visible {
+  background: #eef3f8;
+  color: #123f6d;
+}
+
+/* 确保 Notes 页面右侧正文不会突破网格宽度。 */
+.notes-main-content {
+  min-width: 0;
+}
+
+/* 在平板和手机上将侧栏移动到正文上方，避免横向空间过窄。 */
+@media (max-width: 900px) {
+  .notes-layout {
+    grid-template-columns: 1fr;
+  }
+
+  /* 手机端取消吸顶效果，让侧栏随页面正常滚动。 */
+  .notes-sidebar {
+    position: static;
+  }
+}
+
+/* 设置具体笔记页面左侧合并目录的整体字体和间距。 */
+.notes-tree {
+  padding: 0.25rem 0.35rem;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* 将 Notes 主目录标题显示为醒目的一级链接。 */
+.notes-tree-root {
+  display: block;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid rgba(23, 54, 93, 0.2);
+  color: var(--academic-blue);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* 移除主笔记列表的默认圆点和外边距。 */
+.notes-tree-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* 为不同笔记之间保留适度的垂直间距。 */
+.notes-tree-list > li {
+  margin: 0.25rem 0 0.65rem;
+}
+
+/* 设置主目录中的笔记标题链接。 */
+.notes-tree-list > li > a {
+  display: block;
+  padding: 0.35rem 0.45rem;
+  border-radius: 0.3rem;
+  color: #31465d;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+/* 高亮当前正在阅读的笔记。 */
+.notes-tree-list > li > a.active {
+  background: #eef3f8;
+  color: var(--academic-blue);
+  font-weight: 700;
+}
+
+/* 将当前笔记的章节作为缩进的二级目录显示。 */
+.notes-tree-sections {
+  margin: 0.35rem 0 0 0.75rem !important;
+  padding: 0 0 0 0.75rem !important;
+  border-left: 1px solid #d9e1ea;
+  list-style: none;
+}
+
+/* 缩小章节子目录的文字，使层级关系更加清楚。 */
+.notes-tree-sections a {
+  padding: 0.25rem 0 !important;
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+
+/* 控制具体笔记正文标题中自动编号与标题文字之间的间距。 */
+.notes-heading-number {
+  margin-right: 0.45em;
+  color: inherit;
+}
+
+/* 隐藏具体笔记发布日期上方的 PUBLISHED 标签，同时保留日期本身。 */
+.note-detail-page:not(.notes-page) .quarto-title-meta-heading {
+  display: none;
+}

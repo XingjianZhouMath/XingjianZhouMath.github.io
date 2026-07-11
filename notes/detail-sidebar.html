@@ -1,0 +1,190 @@
+<!-- 这段脚本只用于具体笔记页面，把 Notes 列表与本页 Contents 合并为左侧树状目录。 -->
+<script>
+  // 等待 Quarto 创建左侧目录和正文后再重组导航。
+  document.addEventListener("DOMContentLoaded", async () => {
+    // Notes 总页面使用自己的侧栏，检测到该页面后立即停止此脚本。
+    if (document.body.classList.contains("notes-page")) return;
+    // 获取 Quarto 为当前笔记生成的左侧本页目录。
+    const toc = document.querySelector("#quarto-sidebar #TOC");
+    // 找不到目录时安全停止，不影响笔记正文。
+    if (!toc) return;
+
+    // 保存当前笔记原有的章节链接列表，稍后放到笔记标题下面。
+    const sectionList = toc.querySelector("ul")?.cloneNode(true);
+    // 获取当前笔记的页面标题，用于网络读取失败时的备用显示。
+    const currentTitle = document.querySelector("h1.title")?.textContent.trim() || "Current note";
+    // 创建合并后的树状目录容器。
+    const tree = document.createElement("div");
+    // 添加类名，供 CSS 设置层级和边框。
+    tree.className = "notes-tree";
+
+    // 创建 Notes 主目录标题链接。
+    const rootLink = document.createElement("a");
+    // 标题点击后返回 Notes 总页面。
+    rootLink.href = "index.html";
+    // 显示统一主目录名称。
+    rootLink.textContent = "Notes";
+    // 添加类名以突出显示主目录标题。
+    rootLink.className = "notes-tree-root";
+    // 将主目录标题加入树状目录。
+    tree.appendChild(rootLink);
+
+    // 创建用于列出每篇笔记的列表。
+    const noteList = document.createElement("ul");
+    // 添加专用类名，避免继承不合适的默认列表样式。
+    noteList.className = "notes-tree-list";
+
+    // 记录是否从 Notes 总页面成功读取到了当前笔记。
+    let foundCurrentNote = false;
+    // 用独立计数器为全部正式笔记生成连续的一级目录编号。
+    let noteNumber = 0;
+
+    // 同时为左侧章节链接和正文中的对应标题添加相同的层级编号。
+    const numberCurrentSections = (list, currentNoteNumber) => {
+      // 直接读取目录列表的一级子节点，避免本地预览环境不支持 :scope 选择器。
+      const sectionItems = list ? Array.from(list.children) : [];
+      // 遍历当前笔记的一级章节条目。
+      sectionItems.forEach((sectionItem, sectionIndex) => {
+        // 从当前一级条目中读取它的章节链接。
+        const sectionLink = sectionItem.querySelector("a");
+        // 没有链接的异常条目直接跳过。
+        if (!sectionLink) return;
+        // 生成“笔记号.章节号”格式的编号。
+        const sectionNumber = `${currentNoteNumber}.${sectionIndex + 1}`;
+        // 保存章节原始名称，避免编号影响锚点地址。
+        const originalTitle = sectionLink.textContent.trim();
+        // 在左侧章节链接前加入层级编号。
+        sectionLink.textContent = `${sectionNumber} ${originalTitle}`;
+        // 从可能被 Quarto 扩展成完整网址的链接中只提取锚点部分。
+        const headingHash = new URL(sectionLink.href, window.location.href).hash;
+        // 根据锚点 ID 找到正文中的对应标题，避免把完整网址误当成 CSS 选择器。
+        const bodyHeading = headingHash ? document.getElementById(decodeURIComponent(headingHash.slice(1))) : null;
+        // 找到正文标题后，在它的可见文字前加入相同编号。
+        if (bodyHeading && !bodyHeading.dataset.numberedByNotesTree) {
+          // 创建专门显示编号的行内元素。
+          const numberSpan = document.createElement("span");
+          // 添加类名以控制编号与标题之间的间距。
+          numberSpan.className = "notes-heading-number";
+          // 设置正文标题编号文字。
+          numberSpan.textContent = sectionNumber;
+          // 将编号插入正文标题最前方。
+          bodyHeading.prepend(numberSpan);
+          // 标记该标题已经编号，避免脚本重复运行时再次添加。
+          bodyHeading.dataset.numberedByNotesTree = "true";
+        }
+      });
+    };
+
+    // 为正文页面主标题添加当前笔记的一级编号。
+    const numberDocumentTitle = (currentNoteNumber) => {
+      // 查找正文顶部的笔记标题。
+      const documentTitle = document.querySelector("h1.title");
+      // 只在标题存在且尚未编号时执行。
+      if (documentTitle && !documentTitle.dataset.numberedByNotesTree) {
+        // 创建标题编号元素。
+        const numberSpan = document.createElement("span");
+        // 添加与章节编号一致的样式类名。
+        numberSpan.className = "notes-heading-number";
+        // 设置一级笔记编号。
+        numberSpan.textContent = `${currentNoteNumber}.`;
+        // 将编号加入页面主标题最前方。
+        documentTitle.prepend(numberSpan);
+        // 标记主标题已经编号。
+        documentTitle.dataset.numberedByNotesTree = "true";
+      }
+    };
+
+    try {
+      // 读取同一文件夹中的 Notes 总页面，以便自动获得全部笔记。
+      const response = await fetch("index.html");
+      // 如果服务器返回错误状态，则转入备用目录逻辑。
+      if (!response.ok) throw new Error("Notes index could not be loaded");
+      // 将 Notes 总页面的 HTML 文本解析为可查询的文档。
+      const indexDocument = new DOMParser().parseFromString(await response.text(), "text/html");
+      // 读取自动笔记列表中的所有卡片链接。
+      const noteCards = indexDocument.querySelectorAll(".quarto-listing a.quarto-grid-link");
+
+      // 为主目录中的每篇笔记创建一级条目。
+      noteCards.forEach((card) => {
+        // 读取卡片中的笔记标题。
+        const title = card.querySelector(".listing-title")?.textContent.trim();
+        // 跳过不含标题的维护文件。
+        if (!title) return;
+        // 当前卡片是正式笔记，因此编号增加一。
+        noteNumber += 1;
+        // 将链接转换成绝对地址，便于判断它是否是当前页面。
+        const targetUrl = new URL(card.getAttribute("href"), new URL("index.html", window.location.href));
+        // 创建笔记列表项。
+        const item = document.createElement("li");
+        // 创建可点击的笔记标题。
+        const link = document.createElement("a");
+        // 设置笔记页面地址。
+        link.href = targetUrl.href;
+        // 设置带一级编号的笔记标题文字。
+        link.textContent = `${noteNumber}. ${title}`;
+        // 判断该条目是否对应当前打开的笔记。
+        const isCurrent = targetUrl.pathname === window.location.pathname;
+
+        // 当前笔记需要显示高亮状态和它的章节子目录。
+        if (isCurrent) {
+          // 标记已经成功匹配当前笔记。
+          foundCurrentNote = true;
+          // 添加当前笔记高亮类名。
+          link.classList.add("active");
+          // 为正文页面主标题添加当前笔记编号。
+          numberDocumentTitle(noteNumber);
+          // 如果存在章节列表，就将它作为当前笔记的二级目录。
+          if (sectionList) {
+            // 为左侧章节链接及正文对应标题添加相同的层级编号。
+            numberCurrentSections(sectionList, noteNumber);
+            // 添加二级目录类名以产生缩进和连接线。
+            sectionList.classList.add("notes-tree-sections");
+            // 将章节目录加入当前笔记条目。
+            item.append(link, sectionList);
+          } else {
+            // 没有章节时只加入笔记标题。
+            item.appendChild(link);
+          }
+        } else {
+          // 非当前笔记只显示一级标题链接。
+          item.appendChild(link);
+        }
+
+        // 将完整笔记条目加入 Notes 主目录。
+        noteList.appendChild(item);
+      });
+    } catch (error) {
+      // 读取失败时由下面的备用逻辑保证当前笔记及其章节仍然可用。
+      foundCurrentNote = false;
+      // 清除可能只构建了一部分的条目，避免侧栏显示不完整内容。
+      noteList.replaceChildren();
+    }
+
+    // 本地文件模式或读取失败时，至少显示当前笔记和它的章节目录。
+    if (!foundCurrentNote) {
+      // 创建当前笔记的备用列表项。
+      const fallbackItem = document.createElement("li");
+      // 创建当前笔记标题链接。
+      const fallbackLink = document.createElement("a");
+      // 链接指向当前页面。
+      fallbackLink.href = window.location.href;
+      // 使用页面标题作为链接文字，并在备用模式下将当前笔记编号设为 1。
+      fallbackLink.textContent = `1. ${currentTitle}`;
+      // 高亮当前笔记。
+      fallbackLink.className = "active";
+      // 备用模式下为正文页面主标题添加编号 1。
+      numberDocumentTitle(1);
+      // 备用模式下也为目录和正文章节添加 1.1、1.2 等层级编号。
+      numberCurrentSections(sectionList, 1);
+      // 将当前笔记和章节目录一起加入备用条目。
+      sectionList ? fallbackItem.append(fallbackLink, sectionList) : fallbackItem.appendChild(fallbackLink);
+      // 将备用条目加入主目录。
+      noteList.appendChild(fallbackItem);
+    }
+
+    // 将笔记列表加入树状目录。
+    tree.appendChild(noteList);
+    // 用合并后的树状目录替换 Quarto 原有的单独 Contents。
+    toc.replaceChildren(tree);
+  });
+</script>

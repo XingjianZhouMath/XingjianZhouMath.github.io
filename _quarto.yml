@@ -4,6 +4,9 @@ project:
   type: website
   # output-dir 指定构建结果写入 docs，方便 GitHub Pages 从 main/docs 发布。
   output-dir: docs
+  # 将 .nojekyll 复制到输出目录，确保 GitHub Pages 原样发布 Quarto 静态文件和 Markdown 下载文件。
+  resources:
+    - ".nojekyll"
   # render 明确限制哪些源文件需要生成网页，避免 README 和项目背景说明被发布。
   render:
     # 渲染项目根目录下所有 Quarto Markdown 页面。
@@ -28,7 +31,7 @@ website:
     # left 中的项目显示在导航栏左侧。
     left:
       # text 是第一个导航按钮上显示的文字。
-      - text: HomePage
+      - text: Home
         # href 指定点击 HomePage 后进入主页。
         href: index.qmd
       # text 定义 CV 导航按钮。
@@ -36,19 +39,13 @@ website:
         # href 指向个人简历页面。
         href: cv.qmd
       # text 定义 Publication 导航按钮。
-      - text: Publication
+      - text: Publications
         # href 指向论文列表页面。
         href: publications.qmd
       # text 定义带下拉菜单的 Notes 主按钮。
       - text: Notes
+        # 点击 Notes 后直接进入笔记总页面，不再显示下拉菜单。
         href: notes/index.qmd
-      # 独立箭头紧邻 Notes；它只负责展开具体笔记。
-      - text: Notes submenu
-        aria-label: Open Notes submenu
-        menu:
-          - text: First Variation of Area
-            # 该链接指向第一变分示例笔记的源页面。
-            href: notes/first-variation.qmd
     # right 中的项目显示在导航栏右侧。
     right:
       # ORCID 公开研究者标识页面。

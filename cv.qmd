@@ -57,9 +57,9 @@ My research lies in **geometric analysis**, focusing on monotonicity formulas an
 
 ## Publications and Preprints
 
-1. Chao Xia, Jiabin Yin, **Xingjian Zhou**. "New monotonicity for *p*-capacitary functions in 3-manifolds with nonnegative scalar curvature." *Advances in Mathematics* **440** (2024), 109526. [Journal](https://doi.org/10.1016/j.aim.2023.109526)
+1. Chao Xia, Jiabin Yin, **Xingjian Zhou**. "New monotonicity for *p*-capacitary functions in 3-manifolds with nonnegative scalar curvature." *Advances in Mathematics* **440** (2024), 109526. [Journal](https://doi.org/10.1016/j.aim.2024.109526)
 
-2. Jiabin Yin, **Xingjian Zhou**. "Sharp upper bounds of *p*-capacity in convex cone and asymptotically flat half-space." *Letters in Mathematical Physics* **116** (2026), Article 34.
+2. Jiabin Yin, **Xingjian Zhou**. "Sharp upper bounds of *p*-capacity in convex cone and asymptotically flat half-space." *Letters in Mathematical Physics* **116** (2026), Article 34. [Journal](https://link.springer.com/article/10.1007/s11005-026-02062-y)
 
 3. Jiabin Yin, **Xingjian Zhou**. "General monotone formula for homogeneous *k*-Hessian equation in the exterior domain and its applications." *arXiv:2506.01434* (2025). [arXiv](https://arxiv.org/abs/2506.01434)
 

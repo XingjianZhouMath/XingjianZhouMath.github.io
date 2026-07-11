@@ -1,0 +1,417 @@
+---
+title: "Conformal Transformation Laws"
+description: "Transformation laws for intrinsic and extrinsic geometric quantities under a conformal change of metric."
+date: 2026-07-11
+categories: [geometric analysis, conformal geometry]
+toc: true
+toc-title: "Contents"
+---
+
+$\newcommand{\owedge}{\mathbin{\rlap{\bigcirc}\mkern5mu\lower0.02ex{\scriptstyle\wedge}\mkern3mu}}$
+
+## Introduction
+
+We study the transformation laws for geometric quantities under a conformal change of metric. Let $(M^n,g)$ be an $n$-dimensional Riemannian manifold, and consider the conformally related metric
+
+$$
+\widetilde{g}=e^{2f}g,
+$$
+
+where $f\in C^\infty(M)$.
+
+The Riemann curvature tensor, Ricci curvature tensor, and scalar curvature associated with $g$ will be denoted by $\mathrm{Rm}$, $\mathrm{Ric}$, and $\mathrm{Sc}$, respectively. Their counterparts with respect to $\widetilde{g}$ will be denoted by $\widetilde{\mathrm{Rm}}$, $\widetilde{\mathrm{Ric}}$, and $\widetilde{\mathrm{Sc}}$.
+
+Now let $\Sigma^{n-1}\subset M^n$ be an immersed hypersurface. With respect to $g$, denote its unit normal, second fundamental form, and mean curvature by $\nu$, $A$, and $H$, respectively. The corresponding quantities computed with respect to $\widetilde{g}$ will be denoted by $\widetilde{\nu}$, $\widetilde{A}$, and $\widetilde{H}$.
+
+Our goal is to derive the transformation laws for these intrinsic and extrinsic geometric quantities under the conformal change
+
+$$
+g\longmapsto \widetilde{g}=e^{2f}g.
+$$
+
+## Geometric Quantities and Conventions
+
+In this section, we fix the notation and sign conventions used throughout the note.
+
+### Levi-Civita Connection
+
+Let $\nabla$ and $\widetilde{\nabla}$ denote the Levi-Civita connections of $g$ and $\widetilde{g}$, respectively. The gradient, Hessian, and Laplace--Beltrami operator associated with $g$ are defined by
+
+$$
+g(\nabla f,X)=df(X),
+$$
+
+$$
+\nabla^2f(X,Y)=X(Yf)-(\nabla_XY)f,
+$$
+
+and
+
+$$
+\Delta f=\operatorname{tr}_g\nabla^2f.
+$$
+
+### Curvature Tensors
+
+We define the Riemann curvature operator by
+
+$$
+\mathrm{Rm}(X,Y)Z
+=\nabla_X\nabla_YZ
+-\nabla_Y\nabla_XZ
+-\nabla_{[X,Y]}Z.
+$$
+
+Its $(0,4)$-tensor version is
+
+$$
+\mathrm{Rm}(X,Y,Z,W)
+=g\bigl(\mathrm{Rm}(X,Y)Z,W\bigr).
+$$
+
+The Ricci and scalar curvatures are obtained by taking traces:
+
+$$
+\mathrm{Ric}_{jl}=g^{ik}\mathrm{Rm}_{ijkl},
+\qquad
+\mathrm{Sc}=g^{jl}\mathrm{Ric}_{jl}.
+$$
+
+For symmetric $(0,2)$-tensors $P$ and $Q$, we use the Kulkarni--Nomizu product
+
+$$
+\begin{aligned}
+(P\owedge Q)(X,Y,Z,W)
+={}&P(X,Z)Q(Y,W)+P(Y,W)Q(X,Z)\\
+&-P(X,W)Q(Y,Z)-P(Y,Z)Q(X,W).
+\end{aligned}
+$$
+
+### Hypersurface Geometry
+
+Let $\nu$ be a choice of unit normal along $\Sigma$. For tangent vector fields $X,Y\in T\Sigma$, we define the second fundamental form by
+
+$$
+A(X,Y)=g(\nabla_X\nu,Y).
+$$
+
+The mean curvature is the trace of $A$ with respect to the induced metric:
+
+$$
+H=\operatorname{tr}_{g|_{T\Sigma}}A.
+$$
+
+::: {.callout-note appearance="simple"}
+## Sign conventions
+
+The signs in the formulas depend on the conventions for $\mathrm{Rm}$, $A$, and $\Delta$. All formulas below use the conventions fixed above. In particular, $H$ is the trace of $A$, rather than its average.
+:::
+
+## Conformal Transformation Formulas
+
+Define the symmetric $(0,2)$-tensor
+
+$$
+B=\nabla^2f-df\otimes df+\frac12|\nabla f|^2g.
+$$
+
+With the conventions above, the conformal transformation laws are as follows.
+
+### Levi-Civita Connection
+
+For vector fields $X,Y$ on $M$,
+
+$$
+\boxed{
+\widetilde{\nabla}_XY
+=\nabla_XY+X(f)Y+Y(f)X-g(X,Y)\nabla f
+}.
+$$
+
+### Riemann Curvature Tensor
+
+As a $(0,4)$-tensor,
+
+$$
+\boxed{
+\widetilde{\mathrm{Rm}}
+=e^{2f}\bigl(\mathrm{Rm}-g\owedge B\bigr)
+}.
+$$
+
+### Ricci Curvature
+
+The Ricci curvature transforms according to
+
+$$
+\boxed{
+\widetilde{\mathrm{Ric}}
+=\mathrm{Ric}
+-(n-2)\bigl(\nabla^2f-df\otimes df\bigr)
+-\bigl(\Delta f+(n-2)|\nabla f|^2\bigr)g
+}.
+$$
+
+### Scalar Curvature
+
+The scalar curvature satisfies
+
+$$
+\boxed{
+\widetilde{\mathrm{Sc}}
+=e^{-2f}
+\left[
+\mathrm{Sc}-2(n-1)\Delta f
+-(n-1)(n-2)|\nabla f|^2
+\right]
+}.
+$$
+
+### Hypersurface Quantities
+
+The unit normal, second fundamental form, and mean curvature transform as
+
+$$
+\boxed{\widetilde{\nu}=e^{-f}\nu},
+$$
+
+$$
+\boxed{
+\widetilde{A}(X,Y)
+=e^f\bigl(A(X,Y)+\nu(f)g(X,Y)\bigr)
+},
+$$
+
+and
+
+$$
+\boxed{
+\widetilde{H}
+=e^{-f}\bigl(H+(n-1)\nu(f)\bigr)
+}.
+$$
+
+## Derivations
+
+### Difference of the Levi-Civita Connections
+
+Set
+
+$$
+D(X,Y)=\widetilde{\nabla}_XY-\nabla_XY.
+$$
+
+Since both connections are torsion-free, $D$ is symmetric in $X$ and $Y$. Applying the Koszul formula to $\widetilde{g}=e^{2f}g$ gives
+
+$$
+\begin{aligned}
+2\widetilde{g}(\widetilde{\nabla}_XY,Z)
+={}&X\widetilde{g}(Y,Z)+Y\widetilde{g}(X,Z)-Z\widetilde{g}(X,Y)\\
+&+\widetilde{g}([X,Y],Z)-\widetilde{g}([X,Z],Y)-\widetilde{g}([Y,Z],X).
+\end{aligned}
+$$
+
+Using
+
+$$
+X\bigl(\widetilde{g}(Y,Z)\bigr)
+=e^{2f}\bigl(2X(f)g(Y,Z)+X(g(Y,Z))\bigr)
+$$
+
+and comparing with the Koszul formula for $g$, we obtain
+
+$$
+g(D(X,Y),Z)
+=X(f)g(Y,Z)+Y(f)g(X,Z)-Z(f)g(X,Y).
+$$
+
+Because $Z(f)=g(\nabla f,Z)$, this yields
+
+$$
+D(X,Y)=X(f)Y+Y(f)X-g(X,Y)\nabla f.
+$$
+
+Therefore,
+
+$$
+\widetilde{\nabla}_XY
+=\nabla_XY+X(f)Y+Y(f)X-g(X,Y)\nabla f.
+$$
+
+### Transformation of the Riemann Curvature Tensor
+
+For two torsion-free connections related by $\widetilde{\nabla}=\nabla+D$, their curvature operators satisfy
+
+$$
+\begin{aligned}
+\widetilde{\mathrm{Rm}}(X,Y)Z
+={}&\mathrm{Rm}(X,Y)Z
++(\nabla_XD)(Y,Z)-(\nabla_YD)(X,Z)\\
+&+D(X,D(Y,Z))-D(Y,D(X,Z)).
+\end{aligned}
+$$
+
+Substituting
+
+$$
+D(X,Y)=X(f)Y+Y(f)X-g(X,Y)\nabla f
+$$
+
+and collecting the Hessian and gradient terms gives
+
+$$
+e^{-2f}\widetilde{\mathrm{Rm}}
+=\mathrm{Rm}-g\owedge
+\left(
+\nabla^2f-df\otimes df+\frac12|\nabla f|^2g
+\right).
+$$
+
+Equivalently,
+
+$$
+\widetilde{\mathrm{Rm}}
+=e^{2f}\bigl(\mathrm{Rm}-g\owedge B\bigr).
+$$
+
+### Transformation of the Ricci Curvature
+
+Contracting the first and third indices of $g\owedge B$ gives
+
+$$
+g^{ik}(g\owedge B)_{ijkl}
+=(n-2)B_{jl}+(\operatorname{tr}_gB)g_{jl}.
+$$
+
+Moreover,
+
+$$
+\operatorname{tr}_gB
+=\Delta f+\frac{n-2}{2}|\nabla f|^2.
+$$
+
+Since $\widetilde{g}^{ik}=e^{-2f}g^{ik}$, tracing the transformed Riemann tensor yields
+
+$$
+\begin{aligned}
+\widetilde{\mathrm{Ric}}
+={}&\mathrm{Ric}-(n-2)B-(\operatorname{tr}_gB)g\\
+={}&\mathrm{Ric}
+-(n-2)(\nabla^2f-df\otimes df)
+-\bigl(\Delta f+(n-2)|\nabla f|^2\bigr)g.
+\end{aligned}
+$$
+
+### Transformation of the Scalar Curvature
+
+Taking the trace of $\widetilde{\mathrm{Ric}}$ with respect to $\widetilde{g}$, we find
+
+$$
+\widetilde{\mathrm{Sc}}
+=\widetilde{g}^{ij}\widetilde{\mathrm{Ric}}_{ij}
+=e^{-2f}g^{ij}\widetilde{\mathrm{Ric}}_{ij}.
+$$
+
+The $g$-trace of the Ricci transformation formula is
+
+$$
+g^{ij}\widetilde{\mathrm{Ric}}_{ij}
+=\mathrm{Sc}-2(n-1)\Delta f
+-(n-1)(n-2)|\nabla f|^2.
+$$
+
+Consequently,
+
+$$
+\widetilde{\mathrm{Sc}}
+=e^{-2f}
+\left[
+\mathrm{Sc}-2(n-1)\Delta f
+-(n-1)(n-2)|\nabla f|^2
+\right].
+$$
+
+### Transformation of the Unit Normal
+
+Because $\nu$ is a $g$-unit normal,
+
+$$
+g(\nu,\nu)=1.
+$$
+
+The vector field $e^{-f}\nu$ remains normal to $\Sigma$, and
+
+$$
+\widetilde{g}(e^{-f}\nu,e^{-f}\nu)
+=e^{2f}g(e^{-f}\nu,e^{-f}\nu)=1.
+$$
+
+Hence
+
+$$
+\widetilde{\nu}=e^{-f}\nu.
+$$
+
+### Transformation of the Second Fundamental Form
+
+For $X,Y\in T\Sigma$,
+
+$$
+\widetilde{A}(X,Y)
+=\widetilde{g}(\widetilde{\nabla}_X\widetilde{\nu},Y).
+$$
+
+Using $\widetilde{\nu}=e^{-f}\nu$, we compute
+
+$$
+\widetilde{\nabla}_X\widetilde{\nu}
+=-e^{-f}X(f)\nu+e^{-f}\widetilde{\nabla}_X\nu.
+$$
+
+The connection transformation formula gives
+
+$$
+\widetilde{\nabla}_X\nu
+=\nabla_X\nu+X(f)\nu+\nu(f)X,
+$$
+
+because $g(X,\nu)=0$. Therefore,
+
+$$
+\widetilde{\nabla}_X\widetilde{\nu}
+=e^{-f}\bigl(\nabla_X\nu+\nu(f)X\bigr).
+$$
+
+It follows that
+
+$$
+\begin{aligned}
+\widetilde{A}(X,Y)
+&=e^{2f}g\left(e^{-f}(\nabla_X\nu+\nu(f)X),Y\right)\\
+&=e^f\bigl(A(X,Y)+\nu(f)g(X,Y)\bigr).
+\end{aligned}
+$$
+
+### Transformation of the Mean Curvature
+
+Let $\{e_1,\ldots,e_{n-1}\}$ be a local $g$-orthonormal frame tangent to $\Sigma$. Then $\{e^{-f}e_1,\ldots,e^{-f}e_{n-1}\}$ is $\widetilde{g}$-orthonormal. Hence
+
+$$
+\begin{aligned}
+\widetilde{H}
+&=\sum_{a=1}^{n-1}\widetilde{A}(e^{-f}e_a,e^{-f}e_a)\\
+&=e^{-f}\sum_{a=1}^{n-1}\bigl(A(e_a,e_a)+\nu(f)\bigr)\\
+&=e^{-f}\bigl(H+(n-1)\nu(f)\bigr).
+\end{aligned}
+$$
+
+Thus,
+
+$$
+\widetilde{H}
+=e^{-f}\bigl(H+(n-1)\nu(f)\bigr).
+$$
+
+---
+
+[← Back to all notes](index.qmd){.notes-back-link}

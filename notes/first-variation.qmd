@@ -2,7 +2,6 @@
 title: "First Variation of Area"
 description: "Deriving the first variation formula and the minimal-surface equation."
 date: 2026-07-11
-date-modified: 2026-07-11
 categories: [minimal surfaces, variational methods]
 toc: true
 toc-title: "Contents"

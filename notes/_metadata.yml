@@ -1,0 +1,10 @@
+# format 为 notes 文件夹中的所有笔记设置统一的网页显示方式。
+body-classes: note-detail-page
+
+format:
+  # html 表示以下设置只作用于生成的网页版本。
+  html:
+    # toc-location 将具体笔记页面的 Contents 目录放到正文左侧。
+    toc-location: left
+    # detail-sidebar.html 将 Notes 主目录与当前笔记的章节目录合并。
+    include-after-body: detail-sidebar.html

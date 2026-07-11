@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2026-07-11">
-<meta name="description" content="Deriving the first variation formula and the minimal-surface equation.">
+<meta name="description" content="Transformation laws for intrinsic and extrinsic geometric quantities under a conformal change of metric.">
 
-<title>First Variation of Area – Xingjian Zhou</title>
+<title>Conformal Transformation Laws – Xingjian Zhou</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -172,10 +172,31 @@ window.Quarto = {
     <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#geometric-setup" id="toc-geometric-setup" class="nav-link active" data-scroll-target="#geometric-setup">Geometric Setup</a></li>
-  <li><a href="#variation-of-the-metric" id="toc-variation-of-the-metric" class="nav-link" data-scroll-target="#variation-of-the-metric">Variation of the Metric</a></li>
-  <li><a href="#first-variation-formula" id="toc-first-variation-formula" class="nav-link" data-scroll-target="#first-variation-formula">First Variation Formula</a></li>
-  <li><a href="#minimality" id="toc-minimality" class="nav-link" data-scroll-target="#minimality">Minimality</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#geometric-quantities-and-conventions" id="toc-geometric-quantities-and-conventions" class="nav-link" data-scroll-target="#geometric-quantities-and-conventions">Geometric Quantities and Conventions</a>
+  <ul class="collapse">
+  <li><a href="#levi-civita-connection" id="toc-levi-civita-connection" class="nav-link" data-scroll-target="#levi-civita-connection">Levi-Civita Connection</a></li>
+  <li><a href="#curvature-tensors" id="toc-curvature-tensors" class="nav-link" data-scroll-target="#curvature-tensors">Curvature Tensors</a></li>
+  <li><a href="#hypersurface-geometry" id="toc-hypersurface-geometry" class="nav-link" data-scroll-target="#hypersurface-geometry">Hypersurface Geometry</a></li>
+  </ul></li>
+  <li><a href="#conformal-transformation-formulas" id="toc-conformal-transformation-formulas" class="nav-link" data-scroll-target="#conformal-transformation-formulas">Conformal Transformation Formulas</a>
+  <ul class="collapse">
+  <li><a href="#levi-civita-connection-1" id="toc-levi-civita-connection-1" class="nav-link" data-scroll-target="#levi-civita-connection-1">Levi-Civita Connection</a></li>
+  <li><a href="#riemann-curvature-tensor" id="toc-riemann-curvature-tensor" class="nav-link" data-scroll-target="#riemann-curvature-tensor">Riemann Curvature Tensor</a></li>
+  <li><a href="#ricci-curvature" id="toc-ricci-curvature" class="nav-link" data-scroll-target="#ricci-curvature">Ricci Curvature</a></li>
+  <li><a href="#scalar-curvature" id="toc-scalar-curvature" class="nav-link" data-scroll-target="#scalar-curvature">Scalar Curvature</a></li>
+  <li><a href="#hypersurface-quantities" id="toc-hypersurface-quantities" class="nav-link" data-scroll-target="#hypersurface-quantities">Hypersurface Quantities</a></li>
+  </ul></li>
+  <li><a href="#derivations" id="toc-derivations" class="nav-link" data-scroll-target="#derivations">Derivations</a>
+  <ul class="collapse">
+  <li><a href="#difference-of-the-levi-civita-connections" id="toc-difference-of-the-levi-civita-connections" class="nav-link" data-scroll-target="#difference-of-the-levi-civita-connections">Difference of the Levi-Civita Connections</a></li>
+  <li><a href="#transformation-of-the-riemann-curvature-tensor" id="toc-transformation-of-the-riemann-curvature-tensor" class="nav-link" data-scroll-target="#transformation-of-the-riemann-curvature-tensor">Transformation of the Riemann Curvature Tensor</a></li>
+  <li><a href="#transformation-of-the-ricci-curvature" id="toc-transformation-of-the-ricci-curvature" class="nav-link" data-scroll-target="#transformation-of-the-ricci-curvature">Transformation of the Ricci Curvature</a></li>
+  <li><a href="#transformation-of-the-scalar-curvature" id="toc-transformation-of-the-scalar-curvature" class="nav-link" data-scroll-target="#transformation-of-the-scalar-curvature">Transformation of the Scalar Curvature</a></li>
+  <li><a href="#transformation-of-the-unit-normal" id="toc-transformation-of-the-unit-normal" class="nav-link" data-scroll-target="#transformation-of-the-unit-normal">Transformation of the Unit Normal</a></li>
+  <li><a href="#transformation-of-the-second-fundamental-form" id="toc-transformation-of-the-second-fundamental-form" class="nav-link" data-scroll-target="#transformation-of-the-second-fundamental-form">Transformation of the Second Fundamental Form</a></li>
+  <li><a href="#transformation-of-the-mean-curvature" id="toc-transformation-of-the-mean-curvature" class="nav-link" data-scroll-target="#transformation-of-the-mean-curvature">Transformation of the Mean Curvature</a></li>
+  </ul></li>
   </ul>
 </nav>
 </nav>
@@ -188,16 +209,16 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">First Variation of Area</h1>
+<h1 class="title">Conformal Transformation Laws</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">minimal surfaces</div>
-    <div class="quarto-category">variational methods</div>
+    <div class="quarto-category">geometric analysis</div>
+    <div class="quarto-category">conformal geometry</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Deriving the first variation formula and the minimal-surface equation.
+    Transformation laws for intrinsic and extrinsic geometric quantities under a conformal change of metric.
   </div>
 </div>
 
@@ -220,78 +241,346 @@ window.Quarto = {
 </header>
 
 
-<div class="note-lead">
-<p>The first variation formula measures how the area of an immersed hypersurface changes under an infinitesimal deformation. Its Euler-Lagrange equation is the minimal-surface equation <span class="math inline">\(H=0\)</span>.</p>
-</div>
-<section id="geometric-setup" class="level2">
-<h2 class="anchored" data-anchor-id="geometric-setup">Geometric Setup</h2>
-<p>Let <span class="math inline">\(F_t:\Sigma\to M\)</span> be a smooth one-parameter variation of an immersion <span class="math inline">\(F=F_0\)</span>. Its variational vector field is</p>
+<p><span class="math inline">\(\newcommand{\owedge}{\mathbin{\rlap{\bigcirc}\mkern5mu\lower0.02ex{\scriptstyle\wedge}\mkern3mu}}\)</span></p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>We study the transformation laws for geometric quantities under a conformal change of metric. Let <span class="math inline">\((M^n,g)\)</span> be an <span class="math inline">\(n\)</span>-dimensional Riemannian manifold, and consider the conformally related metric</p>
 <p><span class="math display">\[
-X=\left.\frac{\partial F_t}{\partial t}\right|_{t=0}.
+\widetilde{g}=e^{2f}g,
 \]</span></p>
-<p>Write <span class="math inline">\(g_t=F_t^*\bar g\)</span> for the induced metric and <span class="math inline">\(d\mu_t\)</span> for its volume form. Along <span class="math inline">\(\Sigma\)</span>, decompose</p>
+<p>where <span class="math inline">\(f\in C^\infty(M)\)</span>.</p>
+<p>The Riemann curvature tensor, Ricci curvature tensor, and scalar curvature associated with <span class="math inline">\(g\)</span> will be denoted by <span class="math inline">\(\mathrm{Rm}\)</span>, <span class="math inline">\(\mathrm{Ric}\)</span>, and <span class="math inline">\(\mathrm{Sc}\)</span>, respectively. Their counterparts with respect to <span class="math inline">\(\widetilde{g}\)</span> will be denoted by <span class="math inline">\(\widetilde{\mathrm{Rm}}\)</span>, <span class="math inline">\(\widetilde{\mathrm{Ric}}\)</span>, and <span class="math inline">\(\widetilde{\mathrm{Sc}}\)</span>.</p>
+<p>Now let <span class="math inline">\(\Sigma^{n-1}\subset M^n\)</span> be an immersed hypersurface. With respect to <span class="math inline">\(g\)</span>, denote its unit normal, second fundamental form, and mean curvature by <span class="math inline">\(\nu\)</span>, <span class="math inline">\(A\)</span>, and <span class="math inline">\(H\)</span>, respectively. The corresponding quantities computed with respect to <span class="math inline">\(\widetilde{g}\)</span> will be denoted by <span class="math inline">\(\widetilde{\nu}\)</span>, <span class="math inline">\(\widetilde{A}\)</span>, and <span class="math inline">\(\widetilde{H}\)</span>.</p>
+<p>Our goal is to derive the transformation laws for these intrinsic and extrinsic geometric quantities under the conformal change</p>
 <p><span class="math display">\[
-X=X^\top+f\nu,
+g\longmapsto \widetilde{g}=e^{2f}g.
 \]</span></p>
-<p>where <span class="math inline">\(X^\top\)</span> is tangential, <span class="math inline">\(\nu\)</span> is a unit normal, and <span class="math inline">\(f=\langle X,\nu\rangle\)</span> is the normal speed.</p>
 </section>
-<section id="variation-of-the-metric" class="level2">
-<h2 class="anchored" data-anchor-id="variation-of-the-metric">Variation of the Metric</h2>
-<p>For tangent vectors <span class="math inline">\(e_i,e_j\)</span> on <span class="math inline">\(\Sigma\)</span>,</p>
+<section id="geometric-quantities-and-conventions" class="level2">
+<h2 class="anchored" data-anchor-id="geometric-quantities-and-conventions">Geometric Quantities and Conventions</h2>
+<p>In this section, we fix the notation and sign conventions used throughout the note.</p>
+<section id="levi-civita-connection" class="level3">
+<h3 class="anchored" data-anchor-id="levi-civita-connection">Levi-Civita Connection</h3>
+<p>Let <span class="math inline">\(\nabla\)</span> and <span class="math inline">\(\widetilde{\nabla}\)</span> denote the Levi-Civita connections of <span class="math inline">\(g\)</span> and <span class="math inline">\(\widetilde{g}\)</span>, respectively. The gradient, Hessian, and Laplace–Beltrami operator associated with <span class="math inline">\(g\)</span> are defined by</p>
 <p><span class="math display">\[
-\left.\frac{d}{dt}\right|_{t=0}(g_t)_{ij}
-=\langle \bar\nabla_{e_i}X,e_j\rangle
-+\langle e_i,\bar\nabla_{e_j}X\rangle.
+g(\nabla f,X)=df(X),
 \]</span></p>
-<p>Taking the trace and using <span class="math inline">\(\frac{d}{dt}d\mu_t=\frac12\operatorname{tr}_{g_t}(\dot g_t)d\mu_t\)</span> gives</p>
 <p><span class="math display">\[
-\left.\frac{d}{dt}\right|_{t=0}d\mu_t
-=\bigl(\operatorname{div}_\Sigma X^\top-Hf\bigr)d\mu.
+\nabla^2f(X,Y)=X(Yf)-(\nabla_XY)f,
 \]</span></p>
-<p>Here the sign convention is <span class="math inline">\(H=\operatorname{div}_\Sigma\nu\)</span>.</p>
+<p>and</p>
+<p><span class="math display">\[
+\Delta f=\operatorname{tr}_g\nabla^2f.
+\]</span></p>
 </section>
-<section id="first-variation-formula" class="level2">
-<h2 class="anchored" data-anchor-id="first-variation-formula">First Variation Formula</h2>
-<p>Integrating the variation of the area form yields</p>
+<section id="curvature-tensors" class="level3">
+<h3 class="anchored" data-anchor-id="curvature-tensors">Curvature Tensors</h3>
+<p>We define the Riemann curvature operator by</p>
 <p><span class="math display">\[
-\left.\frac{d}{dt}\right|_{t=0}\operatorname{Area}(F_t(\Sigma))
-=\int_\Sigma \operatorname{div}_\Sigma X^\top\,d\mu
--\int_\Sigma Hf\,d\mu.
+\mathrm{Rm}(X,Y)Z
+=\nabla_X\nabla_YZ
+-\nabla_Y\nabla_XZ
+-\nabla_{[X,Y]}Z.
 \]</span></p>
-<p>If <span class="math inline">\(\Sigma\)</span> is closed, or if the variation is compactly supported away from <span class="math inline">\(\partial\Sigma\)</span>, the divergence term vanishes. Therefore</p>
-<div class="formula-box">
+<p>Its <span class="math inline">\((0,4)\)</span>-tensor version is</p>
 <p><span class="math display">\[
-\boxed{
-\left.\frac{d}{dt}\right|_{t=0}\operatorname{Area}(F_t(\Sigma))
-=-\int_\Sigma Hf\,d\mu
-}
+\mathrm{Rm}(X,Y,Z,W)
+=g\bigl(\mathrm{Rm}(X,Y)Z,W\bigr).
 \]</span></p>
-</div>
+<p>The Ricci and scalar curvatures are obtained by taking traces:</p>
+<p><span class="math display">\[
+\mathrm{Ric}_{jl}=g^{ik}\mathrm{Rm}_{ijkl},
+\qquad
+\mathrm{Sc}=g^{jl}\mathrm{Ric}_{jl}.
+\]</span></p>
+<p>For symmetric <span class="math inline">\((0,2)\)</span>-tensors <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>, we use the Kulkarni–Nomizu product</p>
+<p><span class="math display">\[
+\begin{aligned}
+(P\owedge Q)(X,Y,Z,W)
+={}&amp;P(X,Z)Q(Y,W)+P(Y,W)Q(X,Z)\\
+&amp;-P(X,W)Q(Y,Z)-P(Y,Z)Q(X,W).
+\end{aligned}
+\]</span></p>
 </section>
-<section id="minimality" class="level2">
-<h2 class="anchored" data-anchor-id="minimality">Minimality</h2>
-<p>A hypersurface is stationary for every compactly supported normal variation precisely when</p>
+<section id="hypersurface-geometry" class="level3">
+<h3 class="anchored" data-anchor-id="hypersurface-geometry">Hypersurface Geometry</h3>
+<p>Let <span class="math inline">\(\nu\)</span> be a choice of unit normal along <span class="math inline">\(\Sigma\)</span>. For tangent vector fields <span class="math inline">\(X,Y\in T\Sigma\)</span>, we define the second fundamental form by</p>
 <p><span class="math display">\[
-H=0.
+A(X,Y)=g(\nabla_X\nu,Y).
 \]</span></p>
-<p>Thus minimal hypersurfaces are exactly the critical points of the area functional. This is the geometric analogue of the Euler-Lagrange equation in the calculus of variations.</p>
+<p>The mean curvature is the trace of <span class="math inline">\(A\)</span> with respect to the induced metric:</p>
+<p><span class="math display">\[
+H=\operatorname{tr}_{g|_{T\Sigma}}A.
+\]</span></p>
 <div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Sign convention
+<span class="screen-reader-only">Note</span>Sign conventions
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Some authors define the mean curvature with the opposite sign. Under that convention the right-hand side of the first variation formula changes sign, but the stationarity condition remains <span class="math inline">\(H=0\)</span>.</p>
+<p>The signs in the formulas depend on the conventions for <span class="math inline">\(\mathrm{Rm}\)</span>, <span class="math inline">\(A\)</span>, and <span class="math inline">\(\Delta\)</span>. All formulas below use the conventions fixed above. In particular, <span class="math inline">\(H\)</span> is the trace of <span class="math inline">\(A\)</span>, rather than its average.</p>
 </div>
 </div>
+</section>
+</section>
+<section id="conformal-transformation-formulas" class="level2">
+<h2 class="anchored" data-anchor-id="conformal-transformation-formulas">Conformal Transformation Formulas</h2>
+<p>Define the symmetric <span class="math inline">\((0,2)\)</span>-tensor</p>
+<p><span class="math display">\[
+B=\nabla^2f-df\otimes df+\frac12|\nabla f|^2g.
+\]</span></p>
+<p>With the conventions above, the conformal transformation laws are as follows.</p>
+<section id="levi-civita-connection-1" class="level3">
+<h3 class="anchored" data-anchor-id="levi-civita-connection-1">Levi-Civita Connection</h3>
+<p>For vector fields <span class="math inline">\(X,Y\)</span> on <span class="math inline">\(M\)</span>,</p>
+<p><span class="math display">\[
+\boxed{
+\widetilde{\nabla}_XY
+=\nabla_XY+X(f)Y+Y(f)X-g(X,Y)\nabla f
+}.
+\]</span></p>
+</section>
+<section id="riemann-curvature-tensor" class="level3">
+<h3 class="anchored" data-anchor-id="riemann-curvature-tensor">Riemann Curvature Tensor</h3>
+<p>As a <span class="math inline">\((0,4)\)</span>-tensor,</p>
+<p><span class="math display">\[
+\boxed{
+\widetilde{\mathrm{Rm}}
+=e^{2f}\bigl(\mathrm{Rm}-g\owedge B\bigr)
+}.
+\]</span></p>
+</section>
+<section id="ricci-curvature" class="level3">
+<h3 class="anchored" data-anchor-id="ricci-curvature">Ricci Curvature</h3>
+<p>The Ricci curvature transforms according to</p>
+<p><span class="math display">\[
+\boxed{
+\widetilde{\mathrm{Ric}}
+=\mathrm{Ric}
+-(n-2)\bigl(\nabla^2f-df\otimes df\bigr)
+-\bigl(\Delta f+(n-2)|\nabla f|^2\bigr)g
+}.
+\]</span></p>
+</section>
+<section id="scalar-curvature" class="level3">
+<h3 class="anchored" data-anchor-id="scalar-curvature">Scalar Curvature</h3>
+<p>The scalar curvature satisfies</p>
+<p><span class="math display">\[
+\boxed{
+\widetilde{\mathrm{Sc}}
+=e^{-2f}
+\left[
+\mathrm{Sc}-2(n-1)\Delta f
+-(n-1)(n-2)|\nabla f|^2
+\right]
+}.
+\]</span></p>
+</section>
+<section id="hypersurface-quantities" class="level3">
+<h3 class="anchored" data-anchor-id="hypersurface-quantities">Hypersurface Quantities</h3>
+<p>The unit normal, second fundamental form, and mean curvature transform as</p>
+<p><span class="math display">\[
+\boxed{\widetilde{\nu}=e^{-f}\nu},
+\]</span></p>
+<p><span class="math display">\[
+\boxed{
+\widetilde{A}(X,Y)
+=e^f\bigl(A(X,Y)+\nu(f)g(X,Y)\bigr)
+},
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\boxed{
+\widetilde{H}
+=e^{-f}\bigl(H+(n-1)\nu(f)\bigr)
+}.
+\]</span></p>
+</section>
+</section>
+<section id="derivations" class="level2">
+<h2 class="anchored" data-anchor-id="derivations">Derivations</h2>
+<section id="difference-of-the-levi-civita-connections" class="level3">
+<h3 class="anchored" data-anchor-id="difference-of-the-levi-civita-connections">Difference of the Levi-Civita Connections</h3>
+<p>Set</p>
+<p><span class="math display">\[
+D(X,Y)=\widetilde{\nabla}_XY-\nabla_XY.
+\]</span></p>
+<p>Since both connections are torsion-free, <span class="math inline">\(D\)</span> is symmetric in <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. Applying the Koszul formula to <span class="math inline">\(\widetilde{g}=e^{2f}g\)</span> gives</p>
+<p><span class="math display">\[
+\begin{aligned}
+2\widetilde{g}(\widetilde{\nabla}_XY,Z)
+={}&amp;X\widetilde{g}(Y,Z)+Y\widetilde{g}(X,Z)-Z\widetilde{g}(X,Y)\\
+&amp;+\widetilde{g}([X,Y],Z)-\widetilde{g}([X,Z],Y)-\widetilde{g}([Y,Z],X).
+\end{aligned}
+\]</span></p>
+<p>Using</p>
+<p><span class="math display">\[
+X\bigl(\widetilde{g}(Y,Z)\bigr)
+=e^{2f}\bigl(2X(f)g(Y,Z)+X(g(Y,Z))\bigr)
+\]</span></p>
+<p>and comparing with the Koszul formula for <span class="math inline">\(g\)</span>, we obtain</p>
+<p><span class="math display">\[
+g(D(X,Y),Z)
+=X(f)g(Y,Z)+Y(f)g(X,Z)-Z(f)g(X,Y).
+\]</span></p>
+<p>Because <span class="math inline">\(Z(f)=g(\nabla f,Z)\)</span>, this yields</p>
+<p><span class="math display">\[
+D(X,Y)=X(f)Y+Y(f)X-g(X,Y)\nabla f.
+\]</span></p>
+<p>Therefore,</p>
+<p><span class="math display">\[
+\widetilde{\nabla}_XY
+=\nabla_XY+X(f)Y+Y(f)X-g(X,Y)\nabla f.
+\]</span></p>
+</section>
+<section id="transformation-of-the-riemann-curvature-tensor" class="level3">
+<h3 class="anchored" data-anchor-id="transformation-of-the-riemann-curvature-tensor">Transformation of the Riemann Curvature Tensor</h3>
+<p>For two torsion-free connections related by <span class="math inline">\(\widetilde{\nabla}=\nabla+D\)</span>, their curvature operators satisfy</p>
+<p><span class="math display">\[
+\begin{aligned}
+\widetilde{\mathrm{Rm}}(X,Y)Z
+={}&amp;\mathrm{Rm}(X,Y)Z
++(\nabla_XD)(Y,Z)-(\nabla_YD)(X,Z)\\
+&amp;+D(X,D(Y,Z))-D(Y,D(X,Z)).
+\end{aligned}
+\]</span></p>
+<p>Substituting</p>
+<p><span class="math display">\[
+D(X,Y)=X(f)Y+Y(f)X-g(X,Y)\nabla f
+\]</span></p>
+<p>and collecting the Hessian and gradient terms gives</p>
+<p><span class="math display">\[
+e^{-2f}\widetilde{\mathrm{Rm}}
+=\mathrm{Rm}-g\owedge
+\left(
+\nabla^2f-df\otimes df+\frac12|\nabla f|^2g
+\right).
+\]</span></p>
+<p>Equivalently,</p>
+<p><span class="math display">\[
+\widetilde{\mathrm{Rm}}
+=e^{2f}\bigl(\mathrm{Rm}-g\owedge B\bigr).
+\]</span></p>
+</section>
+<section id="transformation-of-the-ricci-curvature" class="level3">
+<h3 class="anchored" data-anchor-id="transformation-of-the-ricci-curvature">Transformation of the Ricci Curvature</h3>
+<p>Contracting the first and third indices of <span class="math inline">\(g\owedge B\)</span> gives</p>
+<p><span class="math display">\[
+g^{ik}(g\owedge B)_{ijkl}
+=(n-2)B_{jl}+(\operatorname{tr}_gB)g_{jl}.
+\]</span></p>
+<p>Moreover,</p>
+<p><span class="math display">\[
+\operatorname{tr}_gB
+=\Delta f+\frac{n-2}{2}|\nabla f|^2.
+\]</span></p>
+<p>Since <span class="math inline">\(\widetilde{g}^{ik}=e^{-2f}g^{ik}\)</span>, tracing the transformed Riemann tensor yields</p>
+<p><span class="math display">\[
+\begin{aligned}
+\widetilde{\mathrm{Ric}}
+={}&amp;\mathrm{Ric}-(n-2)B-(\operatorname{tr}_gB)g\\
+={}&amp;\mathrm{Ric}
+-(n-2)(\nabla^2f-df\otimes df)
+-\bigl(\Delta f+(n-2)|\nabla f|^2\bigr)g.
+\end{aligned}
+\]</span></p>
+</section>
+<section id="transformation-of-the-scalar-curvature" class="level3">
+<h3 class="anchored" data-anchor-id="transformation-of-the-scalar-curvature">Transformation of the Scalar Curvature</h3>
+<p>Taking the trace of <span class="math inline">\(\widetilde{\mathrm{Ric}}\)</span> with respect to <span class="math inline">\(\widetilde{g}\)</span>, we find</p>
+<p><span class="math display">\[
+\widetilde{\mathrm{Sc}}
+=\widetilde{g}^{ij}\widetilde{\mathrm{Ric}}_{ij}
+=e^{-2f}g^{ij}\widetilde{\mathrm{Ric}}_{ij}.
+\]</span></p>
+<p>The <span class="math inline">\(g\)</span>-trace of the Ricci transformation formula is</p>
+<p><span class="math display">\[
+g^{ij}\widetilde{\mathrm{Ric}}_{ij}
+=\mathrm{Sc}-2(n-1)\Delta f
+-(n-1)(n-2)|\nabla f|^2.
+\]</span></p>
+<p>Consequently,</p>
+<p><span class="math display">\[
+\widetilde{\mathrm{Sc}}
+=e^{-2f}
+\left[
+\mathrm{Sc}-2(n-1)\Delta f
+-(n-1)(n-2)|\nabla f|^2
+\right].
+\]</span></p>
+</section>
+<section id="transformation-of-the-unit-normal" class="level3">
+<h3 class="anchored" data-anchor-id="transformation-of-the-unit-normal">Transformation of the Unit Normal</h3>
+<p>Because <span class="math inline">\(\nu\)</span> is a <span class="math inline">\(g\)</span>-unit normal,</p>
+<p><span class="math display">\[
+g(\nu,\nu)=1.
+\]</span></p>
+<p>The vector field <span class="math inline">\(e^{-f}\nu\)</span> remains normal to <span class="math inline">\(\Sigma\)</span>, and</p>
+<p><span class="math display">\[
+\widetilde{g}(e^{-f}\nu,e^{-f}\nu)
+=e^{2f}g(e^{-f}\nu,e^{-f}\nu)=1.
+\]</span></p>
+<p>Hence</p>
+<p><span class="math display">\[
+\widetilde{\nu}=e^{-f}\nu.
+\]</span></p>
+</section>
+<section id="transformation-of-the-second-fundamental-form" class="level3">
+<h3 class="anchored" data-anchor-id="transformation-of-the-second-fundamental-form">Transformation of the Second Fundamental Form</h3>
+<p>For <span class="math inline">\(X,Y\in T\Sigma\)</span>,</p>
+<p><span class="math display">\[
+\widetilde{A}(X,Y)
+=\widetilde{g}(\widetilde{\nabla}_X\widetilde{\nu},Y).
+\]</span></p>
+<p>Using <span class="math inline">\(\widetilde{\nu}=e^{-f}\nu\)</span>, we compute</p>
+<p><span class="math display">\[
+\widetilde{\nabla}_X\widetilde{\nu}
+=-e^{-f}X(f)\nu+e^{-f}\widetilde{\nabla}_X\nu.
+\]</span></p>
+<p>The connection transformation formula gives</p>
+<p><span class="math display">\[
+\widetilde{\nabla}_X\nu
+=\nabla_X\nu+X(f)\nu+\nu(f)X,
+\]</span></p>
+<p>because <span class="math inline">\(g(X,\nu)=0\)</span>. Therefore,</p>
+<p><span class="math display">\[
+\widetilde{\nabla}_X\widetilde{\nu}
+=e^{-f}\bigl(\nabla_X\nu+\nu(f)X\bigr).
+\]</span></p>
+<p>It follows that</p>
+<p><span class="math display">\[
+\begin{aligned}
+\widetilde{A}(X,Y)
+&amp;=e^{2f}g\left(e^{-f}(\nabla_X\nu+\nu(f)X),Y\right)\\
+&amp;=e^f\bigl(A(X,Y)+\nu(f)g(X,Y)\bigr).
+\end{aligned}
+\]</span></p>
+</section>
+<section id="transformation-of-the-mean-curvature" class="level3">
+<h3 class="anchored" data-anchor-id="transformation-of-the-mean-curvature">Transformation of the Mean Curvature</h3>
+<p>Let <span class="math inline">\(\{e_1,\ldots,e_{n-1}\}\)</span> be a local <span class="math inline">\(g\)</span>-orthonormal frame tangent to <span class="math inline">\(\Sigma\)</span>. Then <span class="math inline">\(\{e^{-f}e_1,\ldots,e^{-f}e_{n-1}\}\)</span> is <span class="math inline">\(\widetilde{g}\)</span>-orthonormal. Hence</p>
+<p><span class="math display">\[
+\begin{aligned}
+\widetilde{H}
+&amp;=\sum_{a=1}^{n-1}\widetilde{A}(e^{-f}e_a,e^{-f}e_a)\\
+&amp;=e^{-f}\sum_{a=1}^{n-1}\bigl(A(e_a,e_a)+\nu(f)\bigr)\\
+&amp;=e^{-f}\bigl(H+(n-1)\nu(f)\bigr).
+\end{aligned}
+\]</span></p>
+<p>Thus,</p>
+<p><span class="math display">\[
+\widetilde{H}
+=e^{-f}\bigl(H+(n-1)\nu(f)\bigr).
+\]</span></p>
 <hr>
 <p><a href="../notes/index.html" class="notes-back-link">← Back to all notes</a></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

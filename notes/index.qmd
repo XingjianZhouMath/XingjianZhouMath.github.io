@@ -4,18 +4,22 @@ description: "Expository notes and working calculations in geometric analysis."
 page-layout: full
 body-classes: notes-page
 toc: false
+format:
+  html:
+    include-after-body: sidebar.html
 listing:
   contents:
     - "*.qmd"
     - "*.md"
+    - "!tex/README.md"
   sort: "date desc"
   type: grid
   grid-columns: 2
   fields: [title, description, date, categories]
-  categories: true
+  categories: false
   sort-ui: false
   filter-ui: true
-  page-size: 8
+  page-size: 100
 ---
 
 ::: {.notes-intro}
@@ -32,7 +36,7 @@ Short notes on geometric PDE, minimal surfaces, variational methods, and the cal
 ::: {.notes-publish-copy}
 ### Add a note
 
-Upload a prepared Markdown file to GitHub. Only accounts with write access to this repository can publish; after you confirm the commit, the website rebuilds automatically.
+Upload a prepared Markdown file to GitHub. Only accounts with write access to this repository can publish. After you confirm the commit, GitHub Actions validates the note, rebuilds the Quarto site, and publishes it automatically.
 :::
 
 ::: {.notes-publish-actions}
@@ -43,7 +47,7 @@ Upload a prepared Markdown file to GitHub. Only accounts with write access to th
 
 1. Download the template and replace its sample metadata and content.
 2. Name the file with lowercase letters, numbers, and hyphens, such as `inverse-mean-curvature-flow.md`.
-3. Upload it to GitHub and confirm the commit. A successful build publishes it here automatically.
+3. Upload it to GitHub and confirm the commit. A successful workflow run publishes it here after a few minutes.
 :::
 
 ## Browse Notes

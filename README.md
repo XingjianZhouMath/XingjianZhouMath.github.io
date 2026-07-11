@@ -18,7 +18,7 @@ The Notes page links directly to GitHub's upload screen for the repository's `no
 3. Rename it with lowercase letters, numbers, and hyphens, for example `mean-curvature-flow.md`.
 4. Upload it through the Notes page and confirm the commit on GitHub.
 
-The `Render and publish notes` workflow validates the note, renders the website, and commits the updated `docs/` output. New notes appear automatically on the Notes index. Add an entry to the Notes menu in `_quarto.yml` only when a note should be featured in the top navigation.
+The `Render and publish notes` workflow validates the note, renders the website, and commits the updated `docs/` output. New notes appear automatically on the Notes index after a few minutes. Add an entry to the Notes menu in `_quarto.yml` only when a note should be featured in the top navigation.
 
 Markdown files (`.md`) are also discovered automatically. Put standalone LaTeX sources in `notes/tex/` and link to them from a web note.
 

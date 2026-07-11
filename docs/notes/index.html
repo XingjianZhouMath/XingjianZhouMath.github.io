@@ -45,7 +45,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-8a7168b59ae9a1f3c679c617d7b30f94.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-c7ab57aa33037bad7520c6cb9ec7d6ec.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-title','listing-description','listing-date','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -137,7 +137,7 @@ window.Quarto = {
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed notes-page quarto-light">
+<body class="floating nav-fixed notes-page quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -156,7 +156,7 @@ window.Quarto = {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> 
-<span class="menu-text">HomePage</span></a>
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../cv.html"> 
@@ -164,23 +164,12 @@ window.Quarto = {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../publications.html"> 
-<span class="menu-text">Publication</span></a>
+<span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="../notes/index.html" aria-current="page"> 
 <span class="menu-text">Notes</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-notes-submenu" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Notes submenu</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-notes-submenu">    
-        <li>
-    <a class="dropdown-item" href="../notes/first-variation.html">
- <span class="dropdown-text">First Variation of Area</span></a>
-  </li>  
-    </ul>
-  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
@@ -208,11 +197,12 @@ window.Quarto = {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
+  
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bWluaW1hbCUyMHN1cmZhY2Vz">minimal surfaces <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dmFyaWF0aW9uYWwlMjBtZXRob2Rz">variational methods <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -226,7 +216,7 @@ window.Quarto = {
 </div>
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -252,7 +242,7 @@ GEOMETRIC ANALYSIS · EXPOSITORY NOTES
 <div class="notes-publish">
 <section id="add-a-note" class="level3 notes-publish-copy">
 <h3 class="anchored" data-anchor-id="add-a-note">Add a note</h3>
-<p>Upload a prepared Markdown file to GitHub. Only accounts with write access to this repository can publish; after you confirm the commit, the website rebuilds automatically.</p>
+<p>Upload a prepared Markdown file to GitHub. Only accounts with write access to this repository can publish. After you confirm the commit, GitHub Actions validates the note, rebuilds the Quarto site, and publishes it automatically.</p>
 </section>
 <div class="notes-publish-actions">
 <p><a href="https://github.com/XingjianZhouMath/XingjianZhouMath.github.io/upload/main/notes" class="btn btn-primary">Upload Markdown on GitHub</a></p>
@@ -261,7 +251,7 @@ GEOMETRIC ANALYSIS · EXPOSITORY NOTES
 <ol type="1">
 <li>Download the template and replace its sample metadata and content.</li>
 <li>Name the file with lowercase letters, numbers, and hyphens, such as <code>inverse-mean-curvature-flow.md</code>.</li>
-<li>Upload it to GitHub and confirm the commit. A successful build publishes it here automatically.</li>
+<li>Upload it to GitHub and confirm the commit. A successful workflow run publishes it here after a few minutes.</li>
 </ol>
 </div>
 <section id="browse-notes" class="level2">
@@ -280,16 +270,32 @@ GEOMETRIC ANALYSIS · EXPOSITORY NOTES
     </div>
 </div>
 <div class="list grid quarto-listing-cols-2">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1783775317176">
-<a href="../notes/tex/README.md" class="quarto-grid-link">
+<div class="g-col-1" data-index="0" data-categories="Z2VvbWV0cmljJTIwYW5hbHlzaXMlMkNjb25mb3JtYWwlMjBnZW9tZXRyeQ==" data-listing-date-sort="1783720800000" data-listing-file-modified-sort="1783799041267" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="516">
+<a href="../notes/conformal-metric.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Conformal Transformation Laws
+</h5>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Z2VvbWV0cmljJTIwYW5hbHlzaXM='); return false;">geometric analysis</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y29uZm9ybWFsJTIwZ2VvbWV0cnk='); return false;">conformal geometry</div>
+
+</div>
 <div class="card-text listing-description delink">
+<p>Transformation laws for intrinsic and extrinsic geometric quantities under a conformal change of metric.</p>
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Jul 11, 2026
+</div>
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="bWluaW1hbCUyMHN1cmZhY2VzJTJDdmFyaWF0aW9uYWwlMjBtZXRob2Rz" data-listing-date-sort="1783728000000" data-listing-file-modified-sort="1783775317176" data-listing-date-modified-sort="1783728000000" data-listing-reading-time-sort="2" data-listing-word-count-sort="204">
+<div class="g-col-1" data-index="1" data-categories="bWluaW1hbCUyMHN1cmZhY2VzJTJDdmFyaWF0aW9uYWwlMjBtZXRob2Rz" data-listing-date-sort="1783720800000" data-listing-file-modified-sort="1783787863032" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="204">
 <a href="../notes/first-variation.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -317,6 +323,264 @@ Jul 11, 2026
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div></main> <!-- /main -->
+<!-- 这段脚本只用于具体笔记页面，把 Notes 列表与本页 Contents 合并为左侧树状目录。 -->
+<script>
+  // 等待 Quarto 创建左侧目录和正文后再重组导航。
+  document.addEventListener("DOMContentLoaded", async () => {
+    // Notes 总页面使用自己的侧栏，检测到该页面后立即停止此脚本。
+    if (document.body.classList.contains("notes-page")) return;
+    // 获取 Quarto 为当前笔记生成的左侧本页目录。
+    const toc = document.querySelector("#quarto-sidebar #TOC");
+    // 找不到目录时安全停止，不影响笔记正文。
+    if (!toc) return;
+
+    // 保存当前笔记原有的章节链接列表，稍后放到笔记标题下面。
+    const sectionList = toc.querySelector("ul")?.cloneNode(true);
+    // 获取当前笔记的页面标题，用于网络读取失败时的备用显示。
+    const currentTitle = document.querySelector("h1.title")?.textContent.trim() || "Current note";
+    // 创建合并后的树状目录容器。
+    const tree = document.createElement("div");
+    // 添加类名，供 CSS 设置层级和边框。
+    tree.className = "notes-tree";
+
+    // 创建 Notes 主目录标题链接。
+    const rootLink = document.createElement("a");
+    // 标题点击后返回 Notes 总页面。
+    rootLink.href = "index.html";
+    // 显示统一主目录名称。
+    rootLink.textContent = "Notes";
+    // 添加类名以突出显示主目录标题。
+    rootLink.className = "notes-tree-root";
+    // 将主目录标题加入树状目录。
+    tree.appendChild(rootLink);
+
+    // 创建用于列出每篇笔记的列表。
+    const noteList = document.createElement("ul");
+    // 添加专用类名，避免继承不合适的默认列表样式。
+    noteList.className = "notes-tree-list";
+
+    // 记录是否从 Notes 总页面成功读取到了当前笔记。
+    let foundCurrentNote = false;
+    // 用独立计数器为全部正式笔记生成连续的一级目录编号。
+    let noteNumber = 0;
+
+    // 同时为左侧章节链接和正文中的对应标题添加相同的层级编号。
+    const numberCurrentSections = (list, currentNoteNumber) => {
+      // 直接读取目录列表的一级子节点，避免本地预览环境不支持 :scope 选择器。
+      const sectionItems = list ? Array.from(list.children) : [];
+      // 遍历当前笔记的一级章节条目。
+      sectionItems.forEach((sectionItem, sectionIndex) => {
+        // 从当前一级条目中读取它的章节链接。
+        const sectionLink = sectionItem.querySelector("a");
+        // 没有链接的异常条目直接跳过。
+        if (!sectionLink) return;
+        // 生成“笔记号.章节号”格式的编号。
+        const sectionNumber = `${currentNoteNumber}.${sectionIndex + 1}`;
+        // 保存章节原始名称，避免编号影响锚点地址。
+        const originalTitle = sectionLink.textContent.trim();
+        // 在左侧章节链接前加入层级编号。
+        sectionLink.textContent = `${sectionNumber} ${originalTitle}`;
+        // 从可能被 Quarto 扩展成完整网址的链接中只提取锚点部分。
+        const headingHash = new URL(sectionLink.href, window.location.href).hash;
+        // 根据锚点 ID 找到正文中的对应标题，避免把完整网址误当成 CSS 选择器。
+        const bodyHeading = headingHash ? document.getElementById(decodeURIComponent(headingHash.slice(1))) : null;
+        // 找到正文标题后，在它的可见文字前加入相同编号。
+        if (bodyHeading && !bodyHeading.dataset.numberedByNotesTree) {
+          // 创建专门显示编号的行内元素。
+          const numberSpan = document.createElement("span");
+          // 添加类名以控制编号与标题之间的间距。
+          numberSpan.className = "notes-heading-number";
+          // 设置正文标题编号文字。
+          numberSpan.textContent = sectionNumber;
+          // 将编号插入正文标题最前方。
+          bodyHeading.prepend(numberSpan);
+          // 标记该标题已经编号，避免脚本重复运行时再次添加。
+          bodyHeading.dataset.numberedByNotesTree = "true";
+        }
+      });
+    };
+
+    // 为正文页面主标题添加当前笔记的一级编号。
+    const numberDocumentTitle = (currentNoteNumber) => {
+      // 查找正文顶部的笔记标题。
+      const documentTitle = document.querySelector("h1.title");
+      // 只在标题存在且尚未编号时执行。
+      if (documentTitle && !documentTitle.dataset.numberedByNotesTree) {
+        // 创建标题编号元素。
+        const numberSpan = document.createElement("span");
+        // 添加与章节编号一致的样式类名。
+        numberSpan.className = "notes-heading-number";
+        // 设置一级笔记编号。
+        numberSpan.textContent = `${currentNoteNumber}.`;
+        // 将编号加入页面主标题最前方。
+        documentTitle.prepend(numberSpan);
+        // 标记主标题已经编号。
+        documentTitle.dataset.numberedByNotesTree = "true";
+      }
+    };
+
+    try {
+      // 读取同一文件夹中的 Notes 总页面，以便自动获得全部笔记。
+      const response = await fetch("index.html");
+      // 如果服务器返回错误状态，则转入备用目录逻辑。
+      if (!response.ok) throw new Error("Notes index could not be loaded");
+      // 将 Notes 总页面的 HTML 文本解析为可查询的文档。
+      const indexDocument = new DOMParser().parseFromString(await response.text(), "text/html");
+      // 读取自动笔记列表中的所有卡片链接。
+      const noteCards = indexDocument.querySelectorAll(".quarto-listing a.quarto-grid-link");
+
+      // 为主目录中的每篇笔记创建一级条目。
+      noteCards.forEach((card) => {
+        // 读取卡片中的笔记标题。
+        const title = card.querySelector(".listing-title")?.textContent.trim();
+        // 跳过不含标题的维护文件。
+        if (!title) return;
+        // 当前卡片是正式笔记，因此编号增加一。
+        noteNumber += 1;
+        // 将链接转换成绝对地址，便于判断它是否是当前页面。
+        const targetUrl = new URL(card.getAttribute("href"), new URL("index.html", window.location.href));
+        // 创建笔记列表项。
+        const item = document.createElement("li");
+        // 创建可点击的笔记标题。
+        const link = document.createElement("a");
+        // 设置笔记页面地址。
+        link.href = targetUrl.href;
+        // 设置带一级编号的笔记标题文字。
+        link.textContent = `${noteNumber}. ${title}`;
+        // 判断该条目是否对应当前打开的笔记。
+        const isCurrent = targetUrl.pathname === window.location.pathname;
+
+        // 当前笔记需要显示高亮状态和它的章节子目录。
+        if (isCurrent) {
+          // 标记已经成功匹配当前笔记。
+          foundCurrentNote = true;
+          // 添加当前笔记高亮类名。
+          link.classList.add("active");
+          // 为正文页面主标题添加当前笔记编号。
+          numberDocumentTitle(noteNumber);
+          // 如果存在章节列表，就将它作为当前笔记的二级目录。
+          if (sectionList) {
+            // 为左侧章节链接及正文对应标题添加相同的层级编号。
+            numberCurrentSections(sectionList, noteNumber);
+            // 添加二级目录类名以产生缩进和连接线。
+            sectionList.classList.add("notes-tree-sections");
+            // 将章节目录加入当前笔记条目。
+            item.append(link, sectionList);
+          } else {
+            // 没有章节时只加入笔记标题。
+            item.appendChild(link);
+          }
+        } else {
+          // 非当前笔记只显示一级标题链接。
+          item.appendChild(link);
+        }
+
+        // 将完整笔记条目加入 Notes 主目录。
+        noteList.appendChild(item);
+      });
+    } catch (error) {
+      // 读取失败时由下面的备用逻辑保证当前笔记及其章节仍然可用。
+      foundCurrentNote = false;
+      // 清除可能只构建了一部分的条目，避免侧栏显示不完整内容。
+      noteList.replaceChildren();
+    }
+
+    // 本地文件模式或读取失败时，至少显示当前笔记和它的章节目录。
+    if (!foundCurrentNote) {
+      // 创建当前笔记的备用列表项。
+      const fallbackItem = document.createElement("li");
+      // 创建当前笔记标题链接。
+      const fallbackLink = document.createElement("a");
+      // 链接指向当前页面。
+      fallbackLink.href = window.location.href;
+      // 使用页面标题作为链接文字，并在备用模式下将当前笔记编号设为 1。
+      fallbackLink.textContent = `1. ${currentTitle}`;
+      // 高亮当前笔记。
+      fallbackLink.className = "active";
+      // 备用模式下为正文页面主标题添加编号 1。
+      numberDocumentTitle(1);
+      // 备用模式下也为目录和正文章节添加 1.1、1.2 等层级编号。
+      numberCurrentSections(sectionList, 1);
+      // 将当前笔记和章节目录一起加入备用条目。
+      sectionList ? fallbackItem.append(fallbackLink, sectionList) : fallbackItem.appendChild(fallbackLink);
+      // 将备用条目加入主目录。
+      noteList.appendChild(fallbackItem);
+    }
+
+    // 将笔记列表加入树状目录。
+    tree.appendChild(noteList);
+    // 用合并后的树状目录替换 Quarto 原有的单独 Contents。
+    toc.replaceChildren(tree);
+  });
+</script>
+<!-- 这段脚本只被 Notes 总页面加载，用于生成该页面专属的左侧笔记栏。 -->
+<script>
+  // 等待 Quarto 完成页面结构创建后再读取自动生成的笔记列表。
+  document.addEventListener("DOMContentLoaded", () => {
+    // 找到 Notes 页面的主要内容区域。
+    const main = document.querySelector("body.notes-page main.content");
+    // 如果页面结构发生变化而找不到内容区域，就安全停止，避免影响网页。
+    if (!main) return;
+
+    // 创建承载原有 Notes 页面内容的右侧容器。
+    const content = document.createElement("div");
+    // 添加类名，以便 CSS 控制右侧内容宽度和布局。
+    content.className = "notes-main-content";
+    // 将页面原有的所有内容节点移动到右侧容器中。
+    [...main.children].forEach((child) => content.appendChild(child));
+
+    // 创建独立的两栏布局容器，避免与 Quarto 页面级网格发生冲突。
+    const layout = document.createElement("div");
+    // 添加专用类名，使布局完全由本站 CSS 控制。
+    layout.className = "notes-layout";
+
+    // 创建左侧带边框的侧栏元素；使用普通 div 避免 Quarto 对 aside 的全局定位规则。
+    const sidebar = document.createElement("div");
+    // 添加类名，以便只对这个笔记侧栏应用样式。
+    sidebar.className = "notes-sidebar";
+    // 设置无障碍标签，说明该区域是笔记导航。
+    sidebar.setAttribute("aria-label", "Notes navigation");
+
+    // 创建侧栏标题。
+    const heading = document.createElement("h2");
+    // 标题使用 Notes，明确该边框中的内容类型。
+    heading.textContent = "Notes";
+    // 将标题加入侧栏。
+    sidebar.appendChild(heading);
+
+    // 创建存放所有笔记链接的导航元素。
+    const navigation = document.createElement("nav");
+    // 查找 Quarto 自动列表中包裹整张笔记卡片的链接。
+    const noteLinks = content.querySelectorAll(".quarto-listing a.quarto-grid-link");
+    // 用独立计数器为有标题的正式笔记连续编号。
+    let noteNumber = 0;
+
+    // 为每篇笔记在左侧栏创建一个独立链接。
+    noteLinks.forEach((sourceLink) => {
+      // 查找当前卡片中的笔记标题。
+      const title = sourceLink.querySelector(".listing-title");
+      // 跳过没有标题的维护文件，避免侧栏出现空白项目。
+      if (!title) return;
+      // 当前文件是正式笔记，因此编号增加一。
+      noteNumber += 1;
+      // 创建新的链接，避免移动或破坏正文中的原列表。
+      const link = document.createElement("a");
+      // 复制笔记页面地址。
+      link.href = sourceLink.href;
+      // 在笔记标题前加入一级目录编号。
+      link.textContent = `${noteNumber}. ${title.textContent.trim()}`;
+      // 将笔记链接加入侧栏导航。
+      navigation.appendChild(link);
+    });
+
+    // 将全部笔记链接加入侧栏。
+    sidebar.appendChild(navigation);
+    // 先向独立布局放入侧栏，再放入原有内容，明确固定左右顺序。
+    layout.append(sidebar, content);
+    // 将完整的独立布局加入 Notes 页面的主内容区域。
+    main.appendChild(layout);
+  });
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
