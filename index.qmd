@@ -13,7 +13,7 @@ toc: false
 ::: {.hero}
 ## Welcome
 
-I am a mathematics researcher interested in **geometric analysis**, especially the interaction between geometry, partial differential equations, and variational methods.
+I am a Ph.D. student in mathematics at **Xiamen University** and a joint Ph.D. student at the **University of Trento**. My research lies in **geometric analysis**, especially geometric inequalities and monotonicity formulas arising from elliptic partial differential equations.
 
 This website collects my research, publications, curriculum vitae, and mathematical notes.
 
@@ -22,16 +22,21 @@ This website collects my research, publications, curriculum vitae, and mathemati
 <!-- 三个冒号结束上面开始的 hero 内容容器。 -->
 :::
 
-## Research interests
+## Research Interests
 
-- Geometric partial differential equations
-- Minimal surfaces and variational problems
-- Curvature and global differential geometry
+- Potential theory and nonlinear elliptic/parabolic PDEs
+- Inverse mean curvature flow and minimal surfaces
+- Scalar curvature, rigidity, and the Penrose inequality
 
-## About
+## Research
 
-Add a short biography here: your current institution, position, advisor, and main research themes. You can also add a portrait later with ordinary Markdown image syntax.
+My current work focuses on scalar curvature problems, rigidity phenomena, and analytic aspects of the Penrose inequality. See the dedicated [Publications](publications.qmd) page for my peer-reviewed articles and current preprints.
+
+[View all publications](publications.qmd){.btn .btn-outline-primary} [View my CV](cv.qmd){.btn .btn-outline-primary}
 
 ## Contact
 
-Add your institutional email and office address here when you are ready to publish them.
+[zhouxingjian@stu.xmu.edu.cn](mailto:zhouxingjian@stu.xmu.edu.cn)<br>
+Xiamen University / University of Trento
+
+[ORCID](https://orcid.org/0009-0004-9761-5438){.btn .btn-outline-primary} [Google Scholar](https://scholar.google.com/citations?user=hSVmSnAAAAAJ&hl=en){.btn .btn-outline-primary} [GitHub](https://github.com/XingjianZhouMath){.btn .btn-outline-primary}

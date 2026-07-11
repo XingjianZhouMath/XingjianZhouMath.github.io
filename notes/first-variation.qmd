@@ -1,25 +1,89 @@
 ---
-# title 是笔记标题，也会显示在 Notes 自动目录中。
 title: "First Variation of Area"
-# description 是自动目录中显示的内容摘要。
-description: "A short example note on the first variation formula."
-# date 用于标记发布日期，并决定目录的时间排序。
+description: "Deriving the first variation formula and the minimal-surface equation."
 date: 2026-07-11
-# categories 为笔记添加可筛选的主题标签。
+date-modified: 2026-07-11
 categories: [minimal surfaces, variational methods]
+toc: true
+toc-title: "Contents"
 ---
 
-Let $F_t:\Sigma\to M$ be a smooth variation of an immersion $F=F_0$, with variational vector field
+::: {.note-lead}
+The first variation formula measures how the area of an immersed hypersurface changes under an infinitesimal deformation. Its Euler-Lagrange equation is the minimal-surface equation $H=0$.
+:::
+
+## Geometric Setup
+
+Let $F_t:\Sigma\to M$ be a smooth one-parameter variation of an immersion $F=F_0$. Its variational vector field is
 
 $$
 X=\left.\frac{\partial F_t}{\partial t}\right|_{t=0}.
 $$
 
-For a closed hypersurface and a normal variation $X=f\nu$, the first variation of area is
+Write $g_t=F_t^*\bar g$ for the induced metric and $d\mu_t$ for its volume form. Along $\Sigma$, decompose
+
+$$
+X=X^\top+f\nu,
+$$
+
+where $X^\top$ is tangential, $\nu$ is a unit normal, and $f=\langle X,\nu\rangle$ is the normal speed.
+
+## Variation of the Metric
+
+For tangent vectors $e_i,e_j$ on $\Sigma$,
+
+$$
+\left.\frac{d}{dt}\right|_{t=0}(g_t)_{ij}
+=\langle \bar\nabla_{e_i}X,e_j\rangle
++\langle e_i,\bar\nabla_{e_j}X\rangle.
+$$
+
+Taking the trace and using $\frac{d}{dt}d\mu_t=\frac12\operatorname{tr}_{g_t}(\dot g_t)d\mu_t$ gives
+
+$$
+\left.\frac{d}{dt}\right|_{t=0}d\mu_t
+=\bigl(\operatorname{div}_\Sigma X^\top-Hf\bigr)d\mu.
+$$
+
+Here the sign convention is $H=\operatorname{div}_\Sigma\nu$.
+
+## First Variation Formula
+
+Integrating the variation of the area form yields
 
 $$
 \left.\frac{d}{dt}\right|_{t=0}\operatorname{Area}(F_t(\Sigma))
-=-\int_\Sigma Hf\,d\mu.
+=\int_\Sigma \operatorname{div}_\Sigma X^\top\,d\mu
+-\int_\Sigma Hf\,d\mu.
 $$
 
-Thus a hypersurface is stationary for every compactly supported variation precisely when its mean curvature vanishes.
+If $\Sigma$ is closed, or if the variation is compactly supported away from $\partial\Sigma$, the divergence term vanishes. Therefore
+
+::: {.formula-box}
+$$
+\boxed{
+\left.\frac{d}{dt}\right|_{t=0}\operatorname{Area}(F_t(\Sigma))
+=-\int_\Sigma Hf\,d\mu
+}
+$$
+:::
+
+## Minimality
+
+A hypersurface is stationary for every compactly supported normal variation precisely when
+
+$$
+H=0.
+$$
+
+Thus minimal hypersurfaces are exactly the critical points of the area functional. This is the geometric analogue of the Euler-Lagrange equation in the calculus of variations.
+
+::: {.callout-note appearance="simple"}
+## Sign convention
+
+Some authors define the mean curvature with the opposite sign. Under that convention the right-hand side of the first variation formula changes sign, but the stationarity condition remains $H=0$.
+:::
+
+---
+
+[← Back to all notes](index.qmd){.notes-back-link}

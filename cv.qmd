@@ -1,26 +1,88 @@
 ---
-# title 设置该页面显示的标题。
 title: "Curriculum Vitae"
-# CV 页面内容简洁，因此关闭右侧的本页目录。
-toc: false
+subtitle: "Xingjian Zhou · Geometric Analysis"
+toc: true
+toc-title: "On this page"
+page-layout: article
 ---
 
-This page can contain either a concise web CV or a link to a PDF.
+::: {.cv-actions}
+[Download CV (PDF)](files/XingjianZhouCV.pdf){.btn .btn-primary download="XingjianZhouCV.pdf"}
 
-<!-- 链接指向 files/cv.pdf，并用 Quarto 的主按钮样式显示。 -->
-[Download CV (PDF)](files/cv.pdf){.btn .btn-primary}
+[Email](mailto:zhouxingjian@stu.xmu.edu.cn){.btn .btn-outline-primary}
+
+[ORCID](https://orcid.org/0009-0004-9761-5438){.btn .btn-outline-primary}
+
+[Google Scholar](https://scholar.google.com/citations?user=hSVmSnAAAAAJ&hl=en){.btn .btn-outline-primary}
+
+[GitHub](https://github.com/XingjianZhouMath){.btn .btn-outline-primary}
+:::
 
 ## Education
 
-**Ph.D. in Mathematics**, University Name, expected year  
-Advisor: Professor Name
+::: {.cv-timeline}
+::: {.cv-entry}
+### Joint Ph.D. · University of Trento
 
-## Research interests
+**Trento, Italy · 2024-present**<br>
+Hosts: Prof. Virginia Agostiniani and Prof. Lorenzo Mazzieri
+:::
 
-Geometric analysis, geometric PDE, minimal surfaces, and related variational problems.
+::: {.cv-entry}
+### Ph.D. in Mathematics · Xiamen University
 
-## Experience
+**Xiamen, China · 2022-present**<br>
+Advisor: Prof. Chao Xia
+:::
 
-Add research, teaching, seminar, and organizational experience here.
+::: {.cv-entry}
+### M.S. in Mathematics · Xiamen University
 
-> Place your PDF at `files/cv.pdf` to activate the download button.
+**Xiamen, China · 2020-2022**<br>
+Advisor: Prof. Chao Xia
+:::
+
+::: {.cv-entry}
+### B.S. in Mathematics · Southeast University
+
+**Nanjing, China · 2016-2020**
+:::
+:::
+
+## Research Interests
+
+My research lies in **geometric analysis**, focusing on monotonicity formulas and geometric inequalities associated with elliptic equations arising in differential geometry. Current interests include scalar curvature problems, rigidity phenomena, and analytic aspects of the Penrose inequality.
+
+**Keywords:** Potential theory; nonlinear elliptic and parabolic PDEs; inverse mean curvature flow; minimal surfaces; scalar curvature.
+
+## Publications and Preprints
+
+1. Chao Xia, Jiabin Yin, **Xingjian Zhou**. "New monotonicity for *p*-capacitary functions in 3-manifolds with nonnegative scalar curvature." *Advances in Mathematics* **440** (2024), 109526. [Journal](https://doi.org/10.1016/j.aim.2023.109526)
+
+2. Jiabin Yin, **Xingjian Zhou**. "Sharp upper bounds of *p*-capacity in convex cone and asymptotically flat half-space." *Letters in Mathematical Physics* **116** (2026), Article 34.
+
+3. Jiabin Yin, **Xingjian Zhou**. "General monotone formula for homogeneous *k*-Hessian equation in the exterior domain and its applications." *arXiv:2506.01434* (2025). [arXiv](https://arxiv.org/abs/2506.01434)
+
+4. Chao Xia, Jiabin Yin, **Xingjian Zhou**. "Mass-*p*-Capacity Inequalities in Asymptotically Flat Half-Spaces." *arXiv:2605.31202* (2026). [arXiv](https://arxiv.org/abs/2605.31202)
+
+## Award
+
+**National Scholarship of China**, 2025.
+
+## Selected Talks and Posters
+
+- Invited talk, Guangzhou Young Geometric Analysis Workshop, Guangzhou, China (2023).
+- Invited talk, Southeast University, Nanjing, China (2024).
+- Poster presentation, Topics in Geometric Analysis, Pisa, Italy (2025).
+- Invited talk, Scuola Normale Superiore, Pisa, Italy (2025).
+- Poster presentation, PRIN School on Geometry and Gravity, SISSA, Trieste, Italy (2025).
+- Invited talk, Second Tianyuan Southeast Geometry Forum, Xiamen University, China (2026).
+- Invited talk, University of Freiburg, Freiburg, Germany (2026).
+
+## Teaching Experience
+
+**Teaching Assistant**
+
+- Differential Geometry (Spring 2021)
+- Differential Manifolds (Fall 2021; Fall 2022)
+- Riemannian Geometry (Spring 2024)

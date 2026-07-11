@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2026-07-11">
-<meta name="description" content="A short example note on the first variation formula.">
+<meta name="description" content="Deriving the first variation formula and the minimal-surface equation.">
 
 <title>First Variation of Area – Xingjian Zhou</title>
 <style>
@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c7ab57aa33037bad7520c6cb9ec7d6ec.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-26d9cc88ab9604001aabd73cb1ea1d8f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -136,15 +136,15 @@ window.Quarto = {
     <a class="nav-link" href="../publications.html"> 
 <span class="menu-text">Publication</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-notes" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Notes</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-notes">    
-        <li>
-    <a class="dropdown-item" href="../notes/index.html">
- <span class="dropdown-text">All Notes</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../notes/index.html"> 
+<span class="menu-text">Notes</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-notes-submenu" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Notes submenu</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-notes-submenu">    
         <li>
     <a class="dropdown-item" href="../notes/first-variation.html">
  <span class="dropdown-text">First Variation of Area</span></a>
@@ -153,6 +153,16 @@ window.Quarto = {
   </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://orcid.org/0009-0004-9761-5438"> <i class="bi bi-person-badge-fill" role="img" aria-label="ORCID">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=hSVmSnAAAAAJ&amp;hl=en"> <i class="bi bi-mortarboard-fill" role="img" aria-label="Google Scholar">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/XingjianZhouMath"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
@@ -169,8 +179,17 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#geometric-setup" id="toc-geometric-setup" class="nav-link active" data-scroll-target="#geometric-setup">Geometric Setup</a></li>
+  <li><a href="#variation-of-the-metric" id="toc-variation-of-the-metric" class="nav-link" data-scroll-target="#variation-of-the-metric">Variation of the Metric</a></li>
+  <li><a href="#first-variation-formula" id="toc-first-variation-formula" class="nav-link" data-scroll-target="#first-variation-formula">First Variation Formula</a></li>
+  <li><a href="#minimality" id="toc-minimality" class="nav-link" data-scroll-target="#minimality">Minimality</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -186,7 +205,7 @@ window.Quarto = {
 
 <div>
   <div class="description">
-    A short example note on the first variation formula.
+    Deriving the first variation formula and the minimal-surface equation.
   </div>
 </div>
 
@@ -201,6 +220,12 @@ window.Quarto = {
     </div>
   </div>
   
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">July 11, 2026</p>
+    </div>
+  </div>
     
   </div>
   
@@ -209,18 +234,79 @@ window.Quarto = {
 </header>
 
 
-<p>Let <span class="math inline">\(F_t:\Sigma\to M\)</span> be a smooth variation of an immersion <span class="math inline">\(F=F_0\)</span>, with variational vector field</p>
+<div class="note-lead">
+<p>The first variation formula measures how the area of an immersed hypersurface changes under an infinitesimal deformation. Its Euler-Lagrange equation is the minimal-surface equation <span class="math inline">\(H=0\)</span>.</p>
+</div>
+<section id="geometric-setup" class="level2">
+<h2 class="anchored" data-anchor-id="geometric-setup">Geometric Setup</h2>
+<p>Let <span class="math inline">\(F_t:\Sigma\to M\)</span> be a smooth one-parameter variation of an immersion <span class="math inline">\(F=F_0\)</span>. Its variational vector field is</p>
 <p><span class="math display">\[
 X=\left.\frac{\partial F_t}{\partial t}\right|_{t=0}.
 \]</span></p>
-<p>For a closed hypersurface and a normal variation <span class="math inline">\(X=f\nu\)</span>, the first variation of area is</p>
+<p>Write <span class="math inline">\(g_t=F_t^*\bar g\)</span> for the induced metric and <span class="math inline">\(d\mu_t\)</span> for its volume form. Along <span class="math inline">\(\Sigma\)</span>, decompose</p>
+<p><span class="math display">\[
+X=X^\top+f\nu,
+\]</span></p>
+<p>where <span class="math inline">\(X^\top\)</span> is tangential, <span class="math inline">\(\nu\)</span> is a unit normal, and <span class="math inline">\(f=\langle X,\nu\rangle\)</span> is the normal speed.</p>
+</section>
+<section id="variation-of-the-metric" class="level2">
+<h2 class="anchored" data-anchor-id="variation-of-the-metric">Variation of the Metric</h2>
+<p>For tangent vectors <span class="math inline">\(e_i,e_j\)</span> on <span class="math inline">\(\Sigma\)</span>,</p>
+<p><span class="math display">\[
+\left.\frac{d}{dt}\right|_{t=0}(g_t)_{ij}
+=\langle \bar\nabla_{e_i}X,e_j\rangle
++\langle e_i,\bar\nabla_{e_j}X\rangle.
+\]</span></p>
+<p>Taking the trace and using <span class="math inline">\(\frac{d}{dt}d\mu_t=\frac12\operatorname{tr}_{g_t}(\dot g_t)d\mu_t\)</span> gives</p>
+<p><span class="math display">\[
+\left.\frac{d}{dt}\right|_{t=0}d\mu_t
+=\bigl(\operatorname{div}_\Sigma X^\top-Hf\bigr)d\mu.
+\]</span></p>
+<p>Here the sign convention is <span class="math inline">\(H=\operatorname{div}_\Sigma\nu\)</span>.</p>
+</section>
+<section id="first-variation-formula" class="level2">
+<h2 class="anchored" data-anchor-id="first-variation-formula">First Variation Formula</h2>
+<p>Integrating the variation of the area form yields</p>
 <p><span class="math display">\[
 \left.\frac{d}{dt}\right|_{t=0}\operatorname{Area}(F_t(\Sigma))
-=-\int_\Sigma Hf\,d\mu.
+=\int_\Sigma \operatorname{div}_\Sigma X^\top\,d\mu
+-\int_\Sigma Hf\,d\mu.
 \]</span></p>
-<p>Thus a hypersurface is stationary for every compactly supported variation precisely when its mean curvature vanishes.</p>
+<p>If <span class="math inline">\(\Sigma\)</span> is closed, or if the variation is compactly supported away from <span class="math inline">\(\partial\Sigma\)</span>, the divergence term vanishes. Therefore</p>
+<div class="formula-box">
+<p><span class="math display">\[
+\boxed{
+\left.\frac{d}{dt}\right|_{t=0}\operatorname{Area}(F_t(\Sigma))
+=-\int_\Sigma Hf\,d\mu
+}
+\]</span></p>
+</div>
+</section>
+<section id="minimality" class="level2">
+<h2 class="anchored" data-anchor-id="minimality">Minimality</h2>
+<p>A hypersurface is stationary for every compactly supported normal variation precisely when</p>
+<p><span class="math display">\[
+H=0.
+\]</span></p>
+<p>Thus minimal hypersurfaces are exactly the critical points of the area functional. This is the geometric analogue of the Euler-Lagrange equation in the calculus of variations.</p>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Sign convention
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Some authors define the mean curvature with the opposite sign. Under that convention the right-hand side of the first variation formula changes sign, but the stationarity condition remains <span class="math inline">\(H=0\)</span>.</p>
+</div>
+</div>
+<hr>
+<p><a href="../notes/index.html" class="notes-back-link">← Back to all notes</a></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

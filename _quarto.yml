@@ -10,6 +10,8 @@ project:
     - "*.qmd"
     # 渲染 notes 目录下正式的 Quarto Markdown 笔记。
     - "notes/*.qmd"
+    # 同时支持直接从 GitHub 上传的普通 Markdown 笔记。
+    - "notes/*.md"
     # 感叹号排除仅供复制使用的笔记模板。
     - "!notes/_note-template.qmd"
 
@@ -39,18 +41,24 @@ website:
         href: publications.qmd
       # text 定义带下拉菜单的 Notes 主按钮。
       - text: Notes
-        # menu 表示 Notes 不是单一链接，而是包含多个子按钮。
+        href: notes/index.qmd
+      # 独立箭头紧邻 Notes；它只负责展开具体笔记。
+      - text: Notes submenu
+        aria-label: Open Notes submenu
         menu:
-          # 第一个子按钮用于查看全部笔记。
-          - text: All Notes
-            # 该链接进入会自动汇总笔记的目录页面。
-            href: notes/index.qmd
-          # 第二个子按钮直接打开示例笔记。
           - text: First Variation of Area
             # 该链接指向第一变分示例笔记的源页面。
             href: notes/first-variation.qmd
     # right 中的项目显示在导航栏右侧。
     right:
+      # ORCID 公开研究者标识页面。
+      - icon: person-badge-fill
+        href: https://orcid.org/0009-0004-9761-5438
+        aria-label: ORCID
+      # Google Scholar 个人学术主页。
+      - icon: mortarboard-fill
+        href: https://scholar.google.com/citations?user=hSVmSnAAAAAJ&hl=en
+        aria-label: Google Scholar
       # icon 使用 Quarto 内置的 GitHub 图标。
       - icon: github
         # href 指定图标点击后打开的 GitHub 个人主页。

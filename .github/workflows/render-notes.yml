@@ -1,0 +1,49 @@
+name: Render and publish notes
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "notes/**"
+      - "files/note-template.md"
+      - "scripts/validate_notes.py"
+      - "_quarto.yml"
+      - "styles.css"
+      - ".github/workflows/render-notes.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: render-notes-main
+  cancel-in-progress: true
+
+jobs:
+  render:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Validate note files
+        run: python3 scripts/validate_notes.py
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render website
+        run: quarto render
+
+      - name: Commit rendered site
+        run: |
+          if [ -z "$(git status --porcelain -- docs)" ]; then
+            echo "Rendered site is already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs
+          git commit -m "Render notes site [skip ci]"
+          git push

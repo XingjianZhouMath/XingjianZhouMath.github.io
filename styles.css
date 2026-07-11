@@ -34,6 +34,22 @@ body {
   letter-spacing: 0.02em;
 }
 
+/* Keep the Notes submenu arrow visually attached to the Notes link. */
+#nav-menu-notes-submenu {
+  margin-left: -0.65rem;
+  padding-left: 0.15rem;
+}
+
+#nav-menu-notes-submenu .menu-text {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 /* 下列三个选择器共同控制一级、二级和三级标题。 */
 h1, h2, h3 {
   /* 所有标题统一采用学术深蓝色。 */
@@ -78,11 +94,187 @@ a {
   border-color: var(--academic-blue);
 }
 
+/* CV page */
+.cv-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0.5rem 0 2.25rem;
+}
+
+.cv-timeline {
+  border-left: 2px solid #d9e2ec;
+  margin-left: 0.35rem;
+  padding-left: 1.5rem;
+}
+
+.cv-entry {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.cv-entry::before {
+  background: var(--academic-gold);
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--academic-gold);
+  content: "";
+  height: 0.8rem;
+  left: -1.96rem;
+  position: absolute;
+  top: 0.35rem;
+  width: 0.8rem;
+}
+
+.cv-entry h3 {
+  font-size: 1.12rem;
+  margin-bottom: 0.25rem;
+  margin-top: 0;
+}
+
+.cv-entry p {
+  margin-bottom: 0;
+}
+
+#publications-and-preprints + ol li,
+#selected-talks-and-posters + ul li,
+#teaching-experience + p + ul li {
+  margin-bottom: 0.7rem;
+}
+
+.publication-list > ol > li {
+  margin-bottom: 1.6rem;
+  padding-left: 0.35rem;
+}
+
+.publication-list .btn-sm {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  margin-top: 0.45rem;
+}
+
+/* Notes landing page */
+.notes-intro {
+  align-items: center;
+  background: #f7f9fc;
+  border-top: 3px solid var(--academic-blue);
+  margin: 0.75rem 0 3rem;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.notes-kicker {
+  color: var(--academic-gold);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  margin: 0 0 0.75rem;
+}
+
+.notes-intro-title {
+  color: var(--academic-blue);
+  font-size: clamp(1.8rem, 3.2vw, 2.65rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 0.75rem;
+}
+
+.notes-intro-copy > p:last-child {
+  color: #485b6f;
+  font-size: 1.03rem;
+  line-height: 1.65;
+  margin-bottom: 0;
+  max-width: 720px;
+}
+
+.notes-page .quarto-grid-item {
+  background: #fff;
+  border: 1px solid #e0e7ef;
+  border-top: 3px solid var(--academic-blue);
+  border-radius: 0;
+  box-shadow: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.notes-page .quarto-grid-item:hover {
+  border-color: #aebed0;
+  box-shadow: 0 8px 22px rgba(23, 54, 93, 0.08);
+  transform: translateY(-1px);
+}
+
+.notes-page .listing-title {
+  color: var(--academic-blue);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+}
+
+.notes-publish {
+  background: #fff;
+  border: 1px solid #dfe6ee;
+  margin: 0 0 3rem;
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.notes-publish h3 {
+  margin-top: 0;
+}
+
+.notes-publish-copy p {
+  color: #526477;
+  max-width: 820px;
+}
+
+.notes-publish-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin: 1rem 0 1.25rem;
+}
+
+.notes-publish-actions p {
+  margin: 0;
+}
+
+.notes-publish > ol {
+  margin-bottom: 0;
+  padding-left: 1.25rem;
+}
+
+.notes-publish > ol > li {
+  margin-bottom: 0.45rem;
+}
+
+.note-lead {
+  border-left: 4px solid var(--academic-gold);
+  color: #40546a;
+  font-size: 1.13rem;
+  line-height: 1.75;
+  margin: 0.5rem 0 2.5rem;
+  padding: 0.2rem 0 0.2rem 1.25rem;
+}
+
+.formula-box {
+  background: #f6f8fb;
+  border: 1px solid #dce5ef;
+  margin: 1.75rem 0;
+  overflow-x: auto;
+  padding: 0.65rem 1rem;
+}
+
+.notes-back-link {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+}
+
 /* 当屏幕宽度不超过 576px 时应用下面的手机端调整。 */
 @media (max-width: 576px) {
   /* 在小屏幕上减少欢迎卡片顶部的留白。 */
   .hero {
     /* 1rem 的上边距能为手机保留更多正文空间。 */
     margin-top: 1rem;
+  }
+
+  .notes-intro {
+    margin-top: 0.5rem;
   }
 }

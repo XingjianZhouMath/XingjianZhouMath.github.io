@@ -1,16 +1,27 @@
 ---
-# title 设置论文列表页面的标题。
 title: "Publications"
+subtitle: "Research papers and preprints"
+toc: true
+toc-title: "On this page"
 ---
+
+## Peer-reviewed Publications
+
+::: {.publication-list}
+1. Chao Xia, Jiabin Yin, **Xingjian Zhou**. "New monotonicity for *p*-capacitary functions in 3-manifolds with nonnegative scalar curvature." *Advances in Mathematics* **440** (2024), 109526.<br>
+   [Journal](https://doi.org/10.1016/j.aim.2023.109526){.btn .btn-sm .btn-outline-primary}
+
+2. Jiabin Yin, **Xingjian Zhou**. "Sharp upper bounds of *p*-capacity in convex cone and asymptotically flat half-space." *Letters in Mathematical Physics* **116** (2026), Article 34.
+:::
 
 ## Preprints
 
-1. **Paper title.** With Coauthor Name. *Preprint*, 2026.  
-   [arXiv](https://arxiv.org/) · [PDF](#) · [Journal](#)
+::: {.publication-list}
+1. Chao Xia, Jiabin Yin, **Xingjian Zhou**. "Mass-*p*-Capacity Inequalities in Asymptotically Flat Half-Spaces." *arXiv:2605.31202* (2026).<br>
+   [arXiv](https://arxiv.org/abs/2605.31202){.btn .btn-sm .btn-outline-primary}
 
-## Publications
+2. Jiabin Yin, **Xingjian Zhou**. "General monotone formula for homogeneous *k*-Hessian equation in the exterior domain and its applications." *arXiv:2506.01434* (2025).<br>
+   [arXiv](https://arxiv.org/abs/2506.01434){.btn .btn-sm .btn-outline-primary}
+:::
 
-Add papers in reverse chronological order. A convenient format is:
-
-1. **Title.** With coauthors. *Journal Name* **Volume** (Year), pages.  
-   [arXiv](#) · [DOI](#)
+For a compact overview of my academic background, see my [Curriculum Vitae](cv.qmd).
