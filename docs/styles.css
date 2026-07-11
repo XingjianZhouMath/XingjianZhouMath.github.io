@@ -1,0 +1,88 @@
+/* :root 保存全站可以重复使用的颜色变量。 */
+:root {
+  /* academic-blue 是标题、品牌和主按钮使用的深蓝色。 */
+  --academic-blue: #17365d;
+  /* academic-gold 是主页强调线使用的金色。 */
+  --academic-gold: #a7771a;
+  /* body-text 是普通正文使用的深灰色。 */
+  --body-text: #263238;
+}
+
+/* body 规则控制所有页面的默认正文外观。 */
+body {
+  /* 使用前面定义的深灰色变量作为正文颜色。 */
+  color: var(--body-text);
+  /* 优先使用适合学术阅读的衬线字体，并提供系统备用字体。 */
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* 导航栏和标题横幅使用简洁的无衬线字体，与正文形成层次。 */
+.navbar,
+/* 逗号表示下一行选择器与上一行共享同一组样式。 */
+.quarto-title-banner {
+  /* 优先采用当前操作系统的界面字体。 */
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* navbar-brand 选择器控制左上角网站名称。 */
+.navbar-brand {
+  /* 将网站名称设为学术深蓝色；important 用于覆盖主题默认值。 */
+  color: var(--academic-blue) !important;
+  /* 650 字重让名称醒目但不会像粗体那样过重。 */
+  font-weight: 650;
+  /* 轻微增加字符间距，使名称更清晰。 */
+  letter-spacing: 0.02em;
+}
+
+/* 下列三个选择器共同控制一级、二级和三级标题。 */
+h1, h2, h3 {
+  /* 所有标题统一采用学术深蓝色。 */
+  color: var(--academic-blue);
+}
+
+/* a 选择器控制网页中的普通超链接。 */
+a {
+  /* 使用比标题稍亮的蓝色，确保链接容易辨认。 */
+  color: #245b91;
+}
+
+/* hero 类用于主页顶部的欢迎介绍卡片。 */
+.hero {
+  /* 限制卡片最大宽度，避免大屏幕上的文字行过长。 */
+  max-width: 920px;
+  /* 上下留出空间，并让左右 auto 自动居中。 */
+  margin: 2.5rem auto 3.5rem;
+  /* clamp 根据屏幕宽度自动选择合适的卡片内边距。 */
+  padding: clamp(1.5rem, 4vw, 3.5rem);
+  /* 在左侧添加金色强调线，强化几何简洁感。 */
+  border-left: 5px solid var(--academic-gold);
+  /* 使用非常浅的蓝白渐变作为卡片背景。 */
+  background: linear-gradient(135deg, #f6f8fb, #ffffff);
+  /* 添加轻微阴影，使卡片从背景中自然分离。 */
+  box-shadow: 0 10px 32px rgba(23, 54, 93, 0.08);
+}
+
+/* 该规则只调整 hero 卡片内部的二级标题。 */
+.hero h2 {
+  /* 移除标题默认上边距，使卡片顶部更紧凑。 */
+  margin-top: 0;
+  /* clamp 让欢迎标题在手机和电脑上自动缩放。 */
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+/* btn-primary 控制主要操作按钮，例如 Read my notes。 */
+.btn-primary {
+  /* 将按钮背景设为统一的学术深蓝色。 */
+  background-color: var(--academic-blue);
+  /* 将按钮边框设为相同颜色，保持视觉统一。 */
+  border-color: var(--academic-blue);
+}
+
+/* 当屏幕宽度不超过 576px 时应用下面的手机端调整。 */
+@media (max-width: 576px) {
+  /* 在小屏幕上减少欢迎卡片顶部的留白。 */
+  .hero {
+    /* 1rem 的上边距能为手机保留更多正文空间。 */
+    margin-top: 1rem;
+  }
+}

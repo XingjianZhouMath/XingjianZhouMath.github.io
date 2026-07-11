@@ -1,0 +1,16 @@
+---
+# title 设置论文列表页面的标题。
+title: "Publications"
+---
+
+## Preprints
+
+1. **Paper title.** With Coauthor Name. *Preprint*, 2026.  
+   [arXiv](https://arxiv.org/) · [PDF](#) · [Journal](#)
+
+## Publications
+
+Add papers in reverse chronological order. A convenient format is:
+
+1. **Title.** With coauthors. *Journal Name* **Volume** (Year), pages.  
+   [arXiv](#) · [DOI](#)

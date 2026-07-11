@@ -1,0 +1,37 @@
+---
+# title 是主页的页面标题和浏览器标题。
+title: "Xingjian Zhou"
+# subtitle 在姓名下方标明主要研究方向。
+subtitle: "Geometric Analysis"
+# full 布局允许主页欢迎区域使用更宽的页面空间。
+page-layout: full
+# 主页内容较短，因此关闭本页目录。
+toc: false
+---
+
+<!-- hero 类把这一整块内容显示成 styles.css 中定义的欢迎卡片。 -->
+::: {.hero}
+## Welcome
+
+I am a mathematics researcher interested in **geometric analysis**, especially the interaction between geometry, partial differential equations, and variational methods.
+
+This website collects my research, publications, curriculum vitae, and mathematical notes.
+
+<!-- .btn 创建按钮外形；primary 是实心主按钮，outline-primary 是描边次按钮。 -->
+[Read my notes](notes/index.qmd){.btn .btn-primary} [View publications](publications.qmd){.btn .btn-outline-primary}
+<!-- 三个冒号结束上面开始的 hero 内容容器。 -->
+:::
+
+## Research interests
+
+- Geometric partial differential equations
+- Minimal surfaces and variational problems
+- Curvature and global differential geometry
+
+## About
+
+Add a short biography here: your current institution, position, advisor, and main research themes. You can also add a portrait later with ordinary Markdown image syntax.
+
+## Contact
+
+Add your institutional email and office address here when you are ready to publish them.

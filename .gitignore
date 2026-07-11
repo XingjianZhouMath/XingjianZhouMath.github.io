@@ -1,0 +1,9 @@
+/.quarto/
+/.DS_Store
+Thumbs.db
+
+
+**/*.quarto_ipynb
+
+# 本地项目背景包含机器路径和环境信息，不上传到公开仓库。
+codex_personal_website_context.md

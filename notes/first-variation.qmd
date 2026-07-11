@@ -1,0 +1,25 @@
+---
+# title 是笔记标题，也会显示在 Notes 自动目录中。
+title: "First Variation of Area"
+# description 是自动目录中显示的内容摘要。
+description: "A short example note on the first variation formula."
+# date 用于标记发布日期，并决定目录的时间排序。
+date: 2026-07-11
+# categories 为笔记添加可筛选的主题标签。
+categories: [minimal surfaces, variational methods]
+---
+
+Let $F_t:\Sigma\to M$ be a smooth variation of an immersion $F=F_0$, with variational vector field
+
+$$
+X=\left.\frac{\partial F_t}{\partial t}\right|_{t=0}.
+$$
+
+For a closed hypersurface and a normal variation $X=f\nu$, the first variation of area is
+
+$$
+\left.\frac{d}{dt}\right|_{t=0}\operatorname{Area}(F_t(\Sigma))
+=-\int_\Sigma Hf\,d\mu.
+$$
+
+Thus a hypersurface is stationary for every compactly supported variation precisely when its mean curvature vanishes.

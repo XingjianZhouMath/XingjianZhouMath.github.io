@@ -1,0 +1,100 @@
+[
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Paper title. With Coauthor Name. Preprint, 2026.\narXiv · PDF · Journal"
+  },
+  {
+    "objectID": "publications.html#preprints",
+    "href": "publications.html#preprints",
+    "title": "Publications",
+    "section": "",
+    "text": "Paper title. With Coauthor Name. Preprint, 2026.\narXiv · PDF · Journal"
+  },
+  {
+    "objectID": "publications.html#publications",
+    "href": "publications.html#publications",
+    "title": "Publications",
+    "section": "Publications",
+    "text": "Publications\nAdd papers in reverse chronological order. A convenient format is:\n\nTitle. With coauthors. Journal Name Volume (Year), pages.\narXiv · DOI"
+  },
+  {
+    "objectID": "notes/first-variation.html",
+    "href": "notes/first-variation.html",
+    "title": "First Variation of Area",
+    "section": "",
+    "text": "Let \\(F_t:\\Sigma\\to M\\) be a smooth variation of an immersion \\(F=F_0\\), with variational vector field\n\\[\nX=\\left.\\frac{\\partial F_t}{\\partial t}\\right|_{t=0}.\n\\]\nFor a closed hypersurface and a normal variation \\(X=f\\nu\\), the first variation of area is\n\\[\n\\left.\\frac{d}{dt}\\right|_{t=0}\\operatorname{Area}(F_t(\\Sigma))\n=-\\int_\\Sigma Hf\\,d\\mu.\n\\]\nThus a hypersurface is stationary for every compactly supported variation precisely when its mean curvature vanishes."
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "This page can contain either a concise web CV or a link to a PDF.\nDownload CV (PDF)"
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "Curriculum Vitae",
+    "section": "Education",
+    "text": "Education\nPh.D. in Mathematics, University Name, expected year\nAdvisor: Professor Name"
+  },
+  {
+    "objectID": "cv.html#research-interests",
+    "href": "cv.html#research-interests",
+    "title": "Curriculum Vitae",
+    "section": "Research interests",
+    "text": "Research interests\nGeometric analysis, geometric PDE, minimal surfaces, and related variational problems."
+  },
+  {
+    "objectID": "cv.html#experience",
+    "href": "cv.html#experience",
+    "title": "Curriculum Vitae",
+    "section": "Experience",
+    "text": "Experience\nAdd research, teaching, seminar, and organizational experience here.\n\nPlace your PDF at files/cv.pdf to activate the download button."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Xingjian Zhou",
+    "section": "",
+    "text": "I am a mathematics researcher interested in geometric analysis, especially the interaction between geometry, partial differential equations, and variational methods.\nThis website collects my research, publications, curriculum vitae, and mathematical notes.\n\nRead my notes View publications"
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "Xingjian Zhou",
+    "section": "",
+    "text": "I am a mathematics researcher interested in geometric analysis, especially the interaction between geometry, partial differential equations, and variational methods.\nThis website collects my research, publications, curriculum vitae, and mathematical notes.\n\nRead my notes View publications"
+  },
+  {
+    "objectID": "index.html#research-interests",
+    "href": "index.html#research-interests",
+    "title": "Xingjian Zhou",
+    "section": "Research interests",
+    "text": "Research interests\n\nGeometric partial differential equations\nMinimal surfaces and variational problems\nCurvature and global differential geometry"
+  },
+  {
+    "objectID": "index.html#about",
+    "href": "index.html#about",
+    "title": "Xingjian Zhou",
+    "section": "About",
+    "text": "About\nAdd a short biography here: your current institution, position, advisor, and main research themes. You can also add a portrait later with ordinary Markdown image syntax."
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "Xingjian Zhou",
+    "section": "Contact",
+    "text": "Contact\nAdd your institutional email and office address here when you are ready to publish them."
+  },
+  {
+    "objectID": "notes/index.html",
+    "href": "notes/index.html",
+    "title": "Notes",
+    "section": "",
+    "text": "New Markdown or Quarto notes placed in this folder are listed here automatically. Use the template in _note-template.qmd when starting a note.\nFor a LaTeX source file, place it in notes/tex/ and link to it from a .qmd note. This keeps the source downloadable while allowing Quarto to render the note as a web page.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFirst Variation of Area\n\n\n\nminimal surfaces\n\nvariational methods\n\n\n\nA short example note on the first variation formula.\n\n\n\n\n\nJul 11, 2026\n\n\n\n\n\nNo matching items"
+  }
+]

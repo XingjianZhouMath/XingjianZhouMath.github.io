@@ -1,0 +1,30 @@
+---
+# title 设置笔记总目录的页面标题。
+title: "Notes"
+# description 用一句话说明该目录收录的内容。
+description: "Expository and working notes in geometric analysis."
+# listing 开启 Quarto 的自动内容列表功能。
+listing:
+  # contents 指定需要自动扫描的文件。
+  contents:
+    # 扫描 notes 文件夹下的所有 Quarto Markdown 文件。
+    - "*.qmd"
+    # 同时扫描普通 Markdown 文件。
+    - "*.md"
+  # 按日期从新到旧排列笔记。
+  sort: "date desc"
+  # default 使用 Quarto 默认的列表卡片样式。
+  type: default
+  # fields 指定每条笔记在列表中显示哪些元数据。
+  fields: [title, description, date, categories]
+  # categories: true 显示分类，并允许读者按分类筛选。
+  categories: true
+  # sort-ui: true 向读者显示排序控件。
+  sort-ui: true
+  # filter-ui: true 向读者显示关键词搜索框。
+  filter-ui: true
+---
+
+New Markdown or Quarto notes placed in this folder are listed here automatically. Use the template in `_note-template.qmd` when starting a note.
+
+For a LaTeX source file, place it in `notes/tex/` and link to it from a `.qmd` note. This keeps the source downloadable while allowing Quarto to render the note as a web page.

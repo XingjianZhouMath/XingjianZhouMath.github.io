@@ -1,0 +1,87 @@
+# project 用来定义整个 Quarto 项目的构建方式。
+project:
+  # type: website 表示这是一个多页面网站，而不是单篇文档或书籍。
+  type: website
+  # output-dir 指定构建结果写入 docs，方便 GitHub Pages 从 main/docs 发布。
+  output-dir: docs
+  # render 明确限制哪些源文件需要生成网页，避免 README 和项目背景说明被发布。
+  render:
+    # 渲染项目根目录下所有 Quarto Markdown 页面。
+    - "*.qmd"
+    # 渲染 notes 目录下正式的 Quarto Markdown 笔记。
+    - "notes/*.qmd"
+    # 感叹号排除仅供复制使用的笔记模板。
+    - "!notes/_note-template.qmd"
+
+# website 区域负责网站名称、导航栏、网址和页脚等全局界面。
+website:
+  # title 会显示为浏览器标题的一部分，并作为默认网站名称。
+  title: "Xingjian Zhou"
+  # site-url 是网站发布后的规范网址，供站点地图和链接生成使用。
+  site-url: "https://XingjianZhouMath.github.io"
+  # navbar 开始定义每个页面顶部共用的导航栏。
+  navbar:
+    # background: light 使用浅色导航栏背景。
+    background: light
+    # left 中的项目显示在导航栏左侧。
+    left:
+      # text 是第一个导航按钮上显示的文字。
+      - text: HomePage
+        # href 指定点击 HomePage 后进入主页。
+        href: index.qmd
+      # text 定义 CV 导航按钮。
+      - text: CV
+        # href 指向个人简历页面。
+        href: cv.qmd
+      # text 定义 Publication 导航按钮。
+      - text: Publication
+        # href 指向论文列表页面。
+        href: publications.qmd
+      # text 定义带下拉菜单的 Notes 主按钮。
+      - text: Notes
+        # menu 表示 Notes 不是单一链接，而是包含多个子按钮。
+        menu:
+          # 第一个子按钮用于查看全部笔记。
+          - text: All Notes
+            # 该链接进入会自动汇总笔记的目录页面。
+            href: notes/index.qmd
+          # 第二个子按钮直接打开示例笔记。
+          - text: First Variation of Area
+            # 该链接指向第一变分示例笔记的源页面。
+            href: notes/first-variation.qmd
+    # right 中的项目显示在导航栏右侧。
+    right:
+      # icon 使用 Quarto 内置的 GitHub 图标。
+      - icon: github
+        # href 指定图标点击后打开的 GitHub 个人主页。
+        href: https://github.com/XingjianZhouMath
+        # aria-label 为屏幕阅读器说明图标含义，提高无障碍性。
+        aria-label: GitHub
+  # page-footer 定义所有网页底部共用的页脚。
+  page-footer:
+    # left 是页脚左侧的版权声明。
+    left: "© 2026 Xingjian Zhou"
+    # right 说明网站使用 Quarto 构建。
+    right: "Built with Quarto"
+
+# format 定义网页最终输出格式及其显示选项。
+format:
+  # html 表示将所有页面渲染为浏览器可访问的 HTML。
+  html:
+    # theme 用来选择网站视觉主题。
+    theme:
+      # light 指定浅色模式使用 Cosmo 主题。
+      light: cosmo
+    # css 加载自定义样式，以覆盖或补充主题默认样式。
+    css: styles.css
+    # toc: true 默认在内容页面显示本页目录。
+    toc: true
+    # smooth-scroll 为页面内锚点跳转启用平滑滚动。
+    smooth-scroll: true
+    # link-external-newwindow 让外部链接在新窗口打开。
+    link-external-newwindow: true
+
+# execute 控制 Quarto 对可执行内容和缓存结果的处理方式。
+execute:
+  # freeze: auto 只在源文件变化时重新执行动态内容，普通笔记无需额外依赖。
+  freeze: auto

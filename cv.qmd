@@ -1,0 +1,26 @@
+---
+# title 设置该页面显示的标题。
+title: "Curriculum Vitae"
+# CV 页面内容简洁，因此关闭右侧的本页目录。
+toc: false
+---
+
+This page can contain either a concise web CV or a link to a PDF.
+
+<!-- 链接指向 files/cv.pdf，并用 Quarto 的主按钮样式显示。 -->
+[Download CV (PDF)](files/cv.pdf){.btn .btn-primary}
+
+## Education
+
+**Ph.D. in Mathematics**, University Name, expected year  
+Advisor: Professor Name
+
+## Research interests
+
+Geometric analysis, geometric PDE, minimal surfaces, and related variational problems.
+
+## Experience
+
+Add research, teaching, seminar, and organizational experience here.
+
+> Place your PDF at `files/cv.pdf` to activate the download button.

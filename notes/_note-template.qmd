@@ -1,0 +1,20 @@
+---
+# title 设置新笔记的标题。
+title: "Note Title"
+# description 提供显示在 Notes 目录中的一句话摘要。
+description: "One-sentence summary."
+# date 设置笔记日期，建议改成实际完成日期。
+date: 2026-07-11
+# categories 设置一个或多个数学主题标签。
+categories: [geometric analysis]
+# draft: true 防止尚未完成的模板被发布；完成后删除此行或改为 false。
+draft: true
+---
+
+Write the note here. Inline mathematics uses `$...$`, and displayed mathematics uses:
+
+$$
+\operatorname{Ric}(g)=0.
+$$
+
+Remove `draft: true` when the note is ready to publish.
