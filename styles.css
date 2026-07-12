@@ -207,42 +207,6 @@ a {
   font-size: 1.25rem;
 }
 
-.notes-publish {
-  background: #fff;
-  border: 1px solid #dfe6ee;
-  margin: 0 0 3rem;
-  padding: clamp(1.25rem, 2.5vw, 2rem);
-}
-
-.notes-publish h3 {
-  margin-top: 0;
-}
-
-.notes-publish-copy p {
-  color: #526477;
-  max-width: 820px;
-}
-
-.notes-publish-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.7rem;
-  margin: 1rem 0 1.25rem;
-}
-
-.notes-publish-actions p {
-  margin: 0;
-}
-
-.notes-publish > ol {
-  margin-bottom: 0;
-  padding-left: 1.25rem;
-}
-
-.notes-publish > ol > li {
-  margin-bottom: 0.45rem;
-}
-
 .note-lead {
   border-left: 4px solid var(--academic-gold);
   color: #40546a;

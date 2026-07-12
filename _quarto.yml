@@ -7,6 +7,8 @@ project:
   # 将 .nojekyll 复制到输出目录，确保 GitHub Pages 原样发布 Quarto 静态文件和 Markdown 下载文件。
   resources:
     - ".nojekyll"
+    # 将生成的正式 PDF 笔记复制到网站输出目录。
+    - "output/pdf/*.pdf"
   # render 明确限制哪些源文件需要生成网页，避免 README 和项目背景说明被发布。
   render:
     # 渲染项目根目录下所有 Quarto Markdown 页面。

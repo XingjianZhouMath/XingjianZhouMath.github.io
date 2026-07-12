@@ -32,24 +32,6 @@ Short notes on geometric PDE, minimal surfaces, variational methods, and the cal
 :::
 :::
 
-::: {.notes-publish}
-::: {.notes-publish-copy}
-### Add a note
-
-Upload a prepared Markdown file to GitHub. Only accounts with write access to this repository can publish. After you confirm the commit, GitHub Actions validates the note, rebuilds the Quarto site, and publishes it automatically.
-:::
-
-::: {.notes-publish-actions}
-[Upload Markdown on GitHub](https://github.com/XingjianZhouMath/XingjianZhouMath.github.io/upload/main/notes){.btn .btn-primary}
-
-[Download note template](../files/note-template.md){.btn .btn-outline-primary download="note-template.md"}
-:::
-
-1. Download the template and replace its sample metadata and content.
-2. Name the file with lowercase letters, numbers, and hyphens, such as `inverse-mean-curvature-flow.md`.
-3. Upload it to GitHub and confirm the commit. A successful workflow run publishes it here after a few minutes.
-:::
-
 ## Browse Notes
 
 Expository notes and working calculations. Use the search box or topic labels to browse the collection.

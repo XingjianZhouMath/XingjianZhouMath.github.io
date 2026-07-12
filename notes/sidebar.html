@@ -50,7 +50,7 @@
       noteNumber += 1;
       // 创建新的链接，避免移动或破坏正文中的原列表。
       const link = document.createElement("a");
-      // 复制笔记页面地址。
+      // 复制 Quarto 自动生成的笔记页面地址。
       link.href = sourceLink.href;
       // 在笔记标题前加入一级目录编号。
       link.textContent = `${noteNumber}. ${title.textContent.trim()}`;

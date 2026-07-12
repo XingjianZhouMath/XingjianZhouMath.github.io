@@ -5,9 +5,18 @@ date: 2026-07-11
 categories: [geometric analysis, conformal geometry]
 toc: true
 toc-title: "Contents"
+header-includes:
+  - |
+    ```{=latex}
+    \usepackage{stmaryrd}
+    ```
 ---
 
-$\newcommand{\owedge}{\mathbin{\rlap{\bigcirc}\mkern5mu\lower0.02ex{\scriptstyle\wedge}\mkern3mu}}$
+```{=html}
+<span class="math-macro-definition">\(\newcommand{\owedge}{\mathbin{\rlap{\bigcirc}\mkern5mu\lower0.02ex{\scriptstyle\wedge}\mkern3mu}}\)</span>
+```
+
+[Open PDF version](../output/pdf/conformal-transformation-laws.pdf){.btn .btn-primary target="_blank" rel="noopener"}
 
 ## Introduction
 
