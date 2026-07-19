@@ -45,7 +45,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c7ab57aa33037bad7520c6cb9ec7d6ec.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-742d604b3b384e377e136731628de535.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -255,7 +255,7 @@ GEOMETRIC ANALYSIS · EXPOSITORY NOTES
     </div>
 </div>
 <div class="list grid quarto-listing-cols-2">
-<div class="g-col-1" data-index="0" data-categories="Z2VvbWV0cmljJTIwYW5hbHlzaXMlMkNjb25mb3JtYWwlMjBnZW9tZXRyeQ==" data-listing-date-sort="1783720800000" data-listing-file-modified-sort="1783975278145" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="336">
+<div class="g-col-1" data-index="0" data-categories="Z2VvbWV0cmljJTIwYW5hbHlzaXMlMkNjb25mb3JtYWwlMjBnZW9tZXRyeQ==" data-listing-date-sort="1783728000000" data-listing-file-modified-sort="1784446945838" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="336">
 <a href="../notes/conformal-metric.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -280,7 +280,7 @@ Jul 11, 2026
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="bWluaW1hbCUyMHN1cmZhY2VzJTJDdmFyaWF0aW9uYWwlMjBtZXRob2Rz" data-listing-date-sort="1783720800000" data-listing-file-modified-sort="1783787863032" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="204">
+<div class="g-col-1" data-index="1" data-categories="bWluaW1hbCUyMHN1cmZhY2VzJTJDdmFyaWF0aW9uYWwlMjBtZXRob2Rz" data-listing-date-sort="1783728000000" data-listing-file-modified-sort="1784446945838" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="204">
 <a href="../notes/first-variation.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="card-body post-contents">
@@ -499,141 +499,73 @@ Jul 11, 2026
   });
 </script>
 <!-- 这段脚本只被 Notes 总页面加载，用于生成该页面专属的左侧笔记栏。 -->
-
 <script>
-
   // 等待 Quarto 完成页面结构创建后再读取自动生成的笔记列表。
-
   document.addEventListener("DOMContentLoaded", () => {
-
     // 找到 Notes 页面的主要内容区域。
-
     const main = document.querySelector("body.notes-page main.content");
-
     // 如果页面结构发生变化而找不到内容区域，就安全停止，避免影响网页。
-
     if (!main) return;
 
-
-
     // 创建承载原有 Notes 页面内容的右侧容器。
-
     const content = document.createElement("div");
-
     // 添加类名，以便 CSS 控制右侧内容宽度和布局。
-
     content.className = "notes-main-content";
-
     // 将页面原有的所有内容节点移动到右侧容器中。
-
     [...main.children].forEach((child) => content.appendChild(child));
 
-
-
     // 创建独立的两栏布局容器，避免与 Quarto 页面级网格发生冲突。
-
     const layout = document.createElement("div");
-
     // 添加专用类名，使布局完全由本站 CSS 控制。
-
     layout.className = "notes-layout";
 
-
-
     // 创建左侧带边框的侧栏元素；使用普通 div 避免 Quarto 对 aside 的全局定位规则。
-
     const sidebar = document.createElement("div");
-
     // 添加类名，以便只对这个笔记侧栏应用样式。
-
     sidebar.className = "notes-sidebar";
-
     // 设置无障碍标签，说明该区域是笔记导航。
-
     sidebar.setAttribute("aria-label", "Notes navigation");
 
-
-
     // 创建侧栏标题。
-
     const heading = document.createElement("h2");
-
     // 标题使用 Notes，明确该边框中的内容类型。
-
     heading.textContent = "Notes";
-
     // 将标题加入侧栏。
-
     sidebar.appendChild(heading);
 
-
-
     // 创建存放所有笔记链接的导航元素。
-
     const navigation = document.createElement("nav");
-
     // 查找 Quarto 自动列表中包裹整张笔记卡片的链接。
-
     const noteLinks = content.querySelectorAll(".quarto-listing a.quarto-grid-link");
-
     // 用独立计数器为有标题的正式笔记连续编号。
-
     let noteNumber = 0;
 
-
-
     // 为每篇笔记在左侧栏创建一个独立链接。
-
     noteLinks.forEach((sourceLink) => {
-
       // 查找当前卡片中的笔记标题。
-
       const title = sourceLink.querySelector(".listing-title");
-
       // 跳过没有标题的维护文件，避免侧栏出现空白项目。
-
       if (!title) return;
-
       // 当前文件是正式笔记，因此编号增加一。
-
       noteNumber += 1;
-
       // 创建新的链接，避免移动或破坏正文中的原列表。
-
       const link = document.createElement("a");
-
       // 复制 Quarto 自动生成的笔记页面地址。
-
       link.href = sourceLink.href;
-
       // 在笔记标题前加入一级目录编号。
-
       link.textContent = `${noteNumber}. ${title.textContent.trim()}`;
-
       // 将笔记链接加入侧栏导航。
-
       navigation.appendChild(link);
-
     });
 
-
-
     // 将全部笔记链接加入侧栏。
-
     sidebar.appendChild(navigation);
-
     // 先向独立布局放入侧栏，再放入原有内容，明确固定左右顺序。
-
     layout.append(sidebar, content);
-
     // 将完整的独立布局加入 Notes 页面的主内容区域。
-
     main.appendChild(layout);
-
   });
-
 </script>
-
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
