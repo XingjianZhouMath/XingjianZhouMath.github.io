@@ -1,0 +1,422 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{stmaryrd}% Provides the Kulkarni--Nomizu product symbol \owedge.
+\usepackage[most]{tcolorbox}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+% ---------- Hyperref setup ----------
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!60!black,
+  citecolor=blue!60!black,
+  urlcolor=blue!60!black
+}
+
+% ---------- Paragraph formatting ----------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+
+% ---------- Theorem environments ----------
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+% ---------- Colored boxes ----------
+
+% Theorem (blue)
+\tcolorboxenvironment{theorem}{
+  enhanced,
+  breakable,
+  colback=blue!3,
+  colframe=blue!70!black,
+  boxrule=0.8pt,
+  arc=2pt,
+  left=6pt,
+  right=6pt,
+  top=6pt,
+  bottom=6pt
+}
+
+% Lemma (purple)
+\tcolorboxenvironment{lemma}{
+  enhanced,
+  breakable,
+  colback=violet!3,
+  colframe=violet!70!black,
+  boxrule=0.8pt,
+  arc=2pt,
+  left=6pt,
+  right=6pt,
+  top=6pt,
+  bottom=6pt
+}
+
+% Proposition (blue-gray)
+\tcolorboxenvironment{proposition}{
+  enhanced,
+  breakable,
+  colback=cyan!3,
+  colframe=cyan!60!black,
+  boxrule=0.8pt,
+  arc=2pt,
+  left=6pt,
+  right=6pt,
+  top=6pt,
+  bottom=6pt
+}
+
+% Definition (light blue)
+\tcolorboxenvironment{definition}{
+  enhanced,
+  breakable,
+  colback=blue!2,
+  colframe=blue!50!black,
+  boxrule=0.6pt,
+  arc=2pt,
+  left=6pt,
+  right=6pt,
+  top=6pt,
+  bottom=6pt
+}
+
+% Remark (gray)
+\tcolorboxenvironment{remark}{
+  enhanced,
+  breakable,
+  colback=gray!5,
+  colframe=gray!70!black,
+  boxrule=0.6pt,
+  arc=2pt,
+  left=6pt,
+  right=6pt,
+  top=6pt,
+  bottom=6pt
+}
+
+% ---------- Notation ----------
+\newcommand{\Tr}{\operatorname{tr}}
+\newcommand{\Rm}{\operatorname{Rm}}
+\newcommand{\Ric}{\operatorname{Ric}}
+\newcommand{\Sc}{\operatorname{Sc}}
+\newcommand{\II}{\mathrm{I\!I}}
+
+% ---------- Document ----------
+\begin{document}
+
+\section{Conformal Changes of Riemannian Metrics}
+
+We assume that the reader is familiar with the basic notions of smooth
+manifolds, Riemannian manifolds, Riemannian metrics, and Levi--Civita
+connections.
+
+\subsection{Introduction}
+
+We study the transformation laws for geometric quantities under a conformal
+change of metric. Let \((M^n,g)\) be an \(n\)-dimensional Riemannian manifold,
+and consider the conformally related metric
+\[
+\widetilde g=e^{2f}g,
+\]
+where \(f\in C^\infty(M)\).
+
+The Levi--Civita connection, Riemann curvature tensor, Ricci curvature
+tensor, and scalar curvature associated with \(g\) will be denoted by
+\[
+\nabla,\qquad
+\Rm,\qquad
+\Ric,\qquad
+\Sc,
+\]
+respectively. The corresponding quantities with respect to
+\(\widetilde g\) will be denoted by
+\[
+\widetilde{\nabla},\qquad
+\widetilde{\Rm},\qquad
+\widetilde{\Ric},\qquad
+\widetilde{\Sc}.
+\]
+
+\subsection{Sign Conventions}
+
+Our convention for the Riemann curvature tensor is
+\[
+\Rm(X,Y)Z
+=
+\nabla_Y\nabla_XZ
+-
+\nabla_X\nabla_YZ
++
+\nabla_{[X,Y]}Z.
+\]
+
+The Ricci curvature tensor is defined by
+\[
+\Ric(X,Y)
+=
+\sum_{i=1}^n
+g\bigl(\Rm(X,e_i)Y,e_i\bigr),
+\]
+where \(\{e_i\}_{i=1}^n\) is a local \(g\)-orthonormal frame.
+
+The scalar curvature is defined by
+\[
+\Sc
+=
+\Tr_g\Ric
+=
+\sum_{i=1}^n \Ric(e_i,e_i).
+\]
+Equivalently,
+\[
+\Sc
+=
+\sum_{i,j=1}^n
+g\bigl(\Rm(e_i,e_j)e_i,e_j\bigr).
+\]
+
+With these conventions, a Riemannian manifold of constant sectional
+curvature \(K\) satisfies
+\[
+\Ric=(n-1)Kg,
+\qquad
+\Sc=n(n-1)K.
+\]
+
+For a smooth function \(f\), its Hessian is defined by
+\[
+\nabla^2f(X,Y)
+=
+g(\nabla_X\nabla f,Y),
+\]
+and the Laplace--Beltrami operator is defined by
+\[
+\Delta f
+=
+\Tr_g(\nabla^2f).
+\]
+
+\subsection{Hypersurface Conventions}
+
+Let \(\Sigma^{n-1}\subset M^n\) be an immersed hypersurface. With respect
+to \(g\), denote its unit normal, second fundamental form, and mean curvature
+by
+\[
+\nu,\qquad
+\II,\qquad
+H,
+\]
+respectively.
+
+We adopt the convention
+\[
+\II(X,Y)
+=
+g(\nabla_X\nu,Y),
+\qquad
+X,Y\in T\Sigma,
+\]
+and define the mean curvature by
+\[
+H
+=
+\Tr_{g_\Sigma}\II,
+\]
+where \(g_\Sigma\) is the metric induced on \(\Sigma\) by \(g\). Thus, \(H\)
+is the trace of the second fundamental form, rather than its normalized
+average.
+
+The corresponding quantities computed with respect to \(\widetilde g\)
+will be denoted by
+\[
+\widetilde{\nu},\qquad
+\widetilde{\II},\qquad
+\widetilde H.
+\]
+
+Our goal is to derive the transformation laws for these intrinsic and
+extrinsic geometric quantities under the conformal change
+\[
+g\longmapsto \widetilde g=e^{2f}g.
+\]
+
+\subsection{Conformal Transformation Formulas}
+
+\begin{definition}[Kulkarni--Nomizu product]
+Let \(P\) and \(Q\) be symmetric \((0,2)\)-tensors on \(M\).
+Their Kulkarni--Nomizu product is the \((0,4)\)-tensor
+\(P\owedge Q\) defined by
+\[
+\begin{aligned}
+(P\owedge Q)(X,Y,Z,W)
+={}&
+P(X,Z)Q(Y,W)
++
+P(Y,W)Q(X,Z)
+\\
+&-
+P(X,W)Q(Y,Z)
+-
+P(Y,Z)Q(X,W).
+\end{aligned}
+\]
+\end{definition}
+
+We regard the Riemann curvature tensor as a \((0,4)\)-tensor by setting
+\[
+\Rm(X,Y,Z,W)
+=
+g\bigl(\Rm(X,Y)Z,W\bigr).
+\]
+
+\begin{proposition}[Conformal transformation formulas]
+Let
+\[
+\widetilde g=e^{2f}g,
+\qquad
+f\in C^\infty(M).
+\]
+Then, for any smooth vector fields \(X,Y\) on \(M\), the Levi--Civita
+connections of \(g\) and \(\widetilde g\) satisfy
+\[
+\widetilde{\nabla}_X Y
+=
+\nabla_XY
++
+X(f)Y
++
+Y(f)X
+-
+g(X,Y)\nabla f.
+\]
+
+Regarding the Riemann curvature tensors as \((0,4)\)-tensors, one has
+\[
+\boxed{
+\widetilde{\Rm}
+=
+e^{2f}
+\left[
+\Rm
+-
+g\owedge
+\left(
+\nabla^2f
+-
+df\otimes df
++
+\frac12|\nabla f|_g^2\, g
+\right)
+\right].
+}
+\]
+
+Equivalently, for any smooth vector fields \(X,Y,Z,W\) on \(M\),
+\[
+\begin{aligned}
+\widetilde{\Rm}(X,Y,Z,W)
+=
+e^{2f}\Bigl\{
+&\Rm(X,Y,Z,W)
+\\
+&-g(X,Z)\nabla^2f(Y,W)
+-g(Y,W)\nabla^2f(X,Z)
+\\
+&+g(X,W)\nabla^2f(Y,Z)
++g(Y,Z)\nabla^2f(X,W)
+\\
+&+g(X,Z)Y(f)W(f)
++g(Y,W)X(f)Z(f)
+\\
+&-g(X,W)Y(f)Z(f)
+-g(Y,Z)X(f)W(f)
+\\
+&-|\nabla f|_g^2
+\bigl(
+g(X,Z)g(Y,W)
+-
+g(X,W)g(Y,Z)
+\bigr)
+\Bigr\}.
+\end{aligned}
+\]
+
+The Ricci curvature tensors satisfy
+\[
+\boxed{
+\widetilde{\Ric}
+=
+\Ric
+-
+(n-2)
+\left(
+\nabla^2f
+-
+df\otimes df
++
+\frac12|\nabla f|_g^2\, g
+\right)
+-
+\left(
+\Delta f+\frac{n-2}{2}|\nabla f|_g^2
+\right)g
+.
+}
+\]
+
+The scalar curvatures satisfy
+\[
+\boxed{
+\widetilde{\Sc}
+=
+e^{-2f}
+\left[
+\Sc
+-
+2(n-1)
+\left(
+\Delta f
++
+\frac{n-2}{2}|\nabla f|_g^2
+\right)
+\right].
+}
+\]
+
+Let \(\Sigma^{n-1}\subset M^n\) be an immersed hypersurface. Then
+\[
+\boxed{
+\widetilde{\nu}=e^{-f}\nu.
+}
+\]
+
+For all \(X,Y\in T\Sigma\), the second fundamental forms satisfy
+\[
+\boxed{
+\widetilde{\II}(X,Y)
+=
+e^f
+\left[
+\II(X,Y)+\nu(f)g(X,Y)
+\right].
+}
+\]
+
+Finally, the mean curvatures satisfy
+\[
+\boxed{
+\widetilde H
+=
+e^{-f}
+\left[
+H+(n-1)\nu(f)
+\right].
+}
+\]
+\end{proposition}
+
+\end{document}
